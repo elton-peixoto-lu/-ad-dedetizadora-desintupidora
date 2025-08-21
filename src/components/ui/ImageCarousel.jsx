@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../utils/classNames';
 
@@ -27,8 +28,14 @@ export const ImageCarousel = ({ images = [], intervalMs = 3500, className = '', 
     setIndex((i) => (i + dir + total) % total);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => go(1),
+    onSwipedRight: () => go(-1),
+    trackMouse: true,
+  });
+
   return (
-    <div className={cn('relative overflow-hidden rounded-xl border border-white/10 bg-black/20', className)}>
+    <div {...handlers} className={cn('relative overflow-hidden rounded-xl border border-white/10 bg-black/20', className)}>
       <AnimatePresence initial={false} mode="wait">
         <motion.img
           key={validImages[index]}

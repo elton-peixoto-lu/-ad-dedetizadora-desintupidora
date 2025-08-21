@@ -139,6 +139,24 @@ body {
   /* Gradiente principal do site para evitar cor chapada */
   background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 35%, #dc2626 65%, #991b1b 100%);
   background-attachment: fixed;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 380px) {
+  /* Ajustes finos para telas muito estreitas (Samsung pequenos) */
+  h1, h2, h3, .text-4xl { font-size: 1.8rem !important; }
+  .container { padding-left: 12px !important; padding-right: 12px !important; }
+}
+
+/* Safe areas para iOS */
+:root { 
+  --safe-top: env(safe-area-inset-top); 
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+.with-safe-area {
+  padding-top: calc(1rem + var(--safe-top));
+  padding-bottom: calc(1rem + var(--safe-bottom));
 }
 
 /* Textura sutil e vinheta global para profundidade do fundo */

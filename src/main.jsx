@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { DeviceProvider } from './providers/DeviceProvider.jsx'
 import { ContactPage } from './pages/ContactPage.jsx'
 import { PrivacyPage } from './pages/PrivacyPage.jsx'
 
@@ -14,6 +15,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <DeviceProvider>
+      <RouterProvider router={router} />
+    </DeviceProvider>
   </StrictMode>,
 )

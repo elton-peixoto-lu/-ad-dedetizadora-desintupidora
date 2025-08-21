@@ -9,6 +9,8 @@ import { ResponsiveClock } from '../ui/ResponsiveClock';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 import { ContactQRCodes } from '../shared/ContactQRCodes';
 import { ContactIcons } from '../shared/ContactIcons';
+import { useDevice } from '../../providers/DeviceProvider';
+import { HeroSectionMobile } from './HeroSectionMobile';
 
 /**
  * Seção principal (Hero) - Família e Controle de Pragas
@@ -16,6 +18,11 @@ import { ContactIcons } from '../shared/ContactIcons';
  */
 export const HeroSection = () => {
   const { isMobile, isTablet, prefersReducedMotion } = useResponsive();
+  const device = useDevice();
+
+  if (device.isMobile) {
+    return <HeroSectionMobile />;
+  }
 
   const phoneNumbers = {
     primary: '11988919225',
@@ -127,8 +134,8 @@ export const HeroSection = () => {
             >
               <motion.h1
                 className={cn(
-                  'font-black leading-tight mb-4 md:mb-6 text-shadow-lg',
-                  isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'
+                  'font-black leading-snug mb-3 md:mb-6 text-shadow-lg',
+                  isMobile ? 'text-2xl' : 'text-4xl md:text-5xl lg:text-6xl'
                 )}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -142,7 +149,7 @@ export const HeroSection = () => {
               <motion.div
                 className={cn(
                   'text-yellow-300 font-black mb-6 md:mb-8 break-words',
-                  isMobile ? 'text-4xl' : 'text-5xl md:text-6xl lg:text-7xl'
+                  isMobile ? 'text-3xl' : 'text-5xl md:text-6xl lg:text-7xl'
                 )}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
