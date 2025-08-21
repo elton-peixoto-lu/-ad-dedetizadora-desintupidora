@@ -18,7 +18,7 @@ export const ContactQRCodes = ({
   const whatsappUrl = `https://wa.me/55${whatsappMain.replace(/\D/g,'')}`;
 
   return (
-    <div className={cn('flex items-center justify-center gap-6 md:gap-10', className)}>
+    <div className={cn('flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10', className)}>
       {/* Instagram */}
       <motion.div
         className="flex flex-col items-center gap-2 bg-black/30 p-3 rounded-xl border border-white/10 shadow-xl"
