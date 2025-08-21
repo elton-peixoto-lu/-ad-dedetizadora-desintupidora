@@ -19,7 +19,10 @@ export const CookieBanner = () => {
   useEffect(() => {
     // Verifica se o usuário já deu consentimento
     const consent = Cookies.get(COOKIE_NAME);
-    if (!consent) {
+    // Forçar abertura via query param (?cookies=show)
+    const params = new URLSearchParams(window.location.search);
+    const forceOpen = params.get('cookies') === 'show';
+    if (!consent || forceOpen) {
       // Delay para mostrar o banner após o carregamento da página
       const timer = setTimeout(() => {
         setShowBanner(true);
@@ -61,7 +64,21 @@ export const CookieBanner = () => {
     }
   ];
 
-  if (!showBanner) return null;
+  // Botão flutuante "Gerenciar cookies" (aparece quando o banner não está visível)
+  if (!showBanner) {
+    const consent = Cookies.get(COOKIE_NAME);
+    if (consent) {
+      return (
+        <button
+          onClick={() => setShowBanner(true)}
+          className="fixed bottom-4 right-4 z-[9999] bg-white/10 hover:bg-white/15 text-white border border-white/20 rounded-full px-3 py-2 text-xs md:text-sm"
+        >
+          🍪 Gerenciar cookies
+        </button>
+      );
+    }
+    return null;
+  }
 
   return (
     <AnimatePresence>
@@ -70,7 +87,7 @@ export const CookieBanner = () => {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: '100%', opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-red-700 via-red-700/95 to-red-800 shadow-2xl border-t-4 border-red-600"
+        className="fixed bottom-0 left-0 right-0 z-[9999] bg-gradient-to-r from-red-700 via-red-700/95 to-red-800 shadow-2xl border-t-4 border-red-600 with-safe-area"
       >
         <div className="container mx-auto px-4 py-4 md:py-6">
           {!showDetails ? (

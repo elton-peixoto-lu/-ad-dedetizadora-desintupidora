@@ -21,10 +21,10 @@
     background: radial-gradient(
       circle at center,
       rgba(0,0,0,0) 55%,
-      rgba(127, 29, 29, 0.35) 80%,
-      rgba(127, 29, 29, 0.55) 100%
+      rgba(107, 13, 13, 0.25) 80%,
+      rgba(48, 9, 9, 0.45) 100%
     );
-    filter: blur(8px);
+    filter: blur(6px);
   }
 
   .red-vignette-fixed {
@@ -34,10 +34,10 @@
     background: radial-gradient(
       circle at center,
       rgba(0,0,0,0) 55%,
-      rgba(127, 29, 29, 0.35) 80%,
-      rgba(127, 29, 29, 0.55) 100%
+      rgba(107, 13, 13, 0.22) 80%,
+      rgba(48, 9, 9, 0.4) 100%
     );
-    filter: blur(8px);
+    filter: blur(6px);
   }
   
   .glass-bg-dark {
@@ -137,7 +137,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   /* Gradiente principal do site para evitar cor chapada */
-  background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 35%, #dc2626 65%, #991b1b 100%);
+  background: linear-gradient(135deg, #300909 0%, #6b0d0d 35%, #8f1d1d 70%, #300909 100%);
   background-attachment: fixed;
   width: 100%;
   overflow-x: hidden;
