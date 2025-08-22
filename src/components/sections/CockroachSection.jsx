@@ -53,16 +53,16 @@ export const CockroachSection = () => {
           >
             <motion.h2
               className={cn(
-                'font-black mb-6',
-                isMobile ? 'text-3xl' : 'text-4xl md:text-5xl'
+                'font-bold mb-2 text-green-700',
+                isMobile ? 'text-2xl' : 'text-3xl md:text-4xl'
               )}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Controle de pragas com segurança e garantia
+              Serviços de dedetização e desentupidora com responsabilidade ambiental
             </motion.h2>
-            <p className="text-gray-700 mb-4">Equipe técnica, produtos autorizados e atendimento pontual.</p>
+            <p className="text-gray-700 mb-4">Equipe técnica, produtos autorizados e compromisso com a saúde da sua família.</p>
             <motion.ul
               className="text-left mx-auto md:mx-0 max-w-xl mb-6 md:mb-8"
               initial={{ opacity: 0 }}

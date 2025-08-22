@@ -21,11 +21,7 @@ export const PestControlSection = () => {
     secondary: '1913238991'
   };
 
-  const pests = [
-    { emoji: '🐛', position: 'top-0 left-0', size: 'text-4xl md:text-5xl lg:text-6xl' },
-    { emoji: '🦂', position: 'top-0 right-0', size: 'text-3xl md:text-4xl lg:text-5xl' },
-    { emoji: '🐜', position: 'bottom-0 left-1/4', size: 'text-2xl md:text-3xl lg:text-4xl' }
-  ];
+  const pests = [];
 
   return (
     <section className={companyClasses.section.pestControl}>
@@ -42,7 +38,7 @@ export const PestControlSection = () => {
           {/* Lado esquerdo - Texto */}
           <motion.div
             className={cn(
-              'text-white text-center',
+              'text-gray-900 text-center',
               !isMobile ? 'lg:text-left lg:order-1' : 'order-2'
             )}
             initial={{ opacity: 0, x: -50 }}
@@ -51,29 +47,26 @@ export const PestControlSection = () => {
           >
             <motion.h2
               className={cn(
-                'font-black mb-6',
+                'font-black mb-2 text-green-700',
                 isMobile ? 'text-3xl' : 'text-4xl md:text-5xl'
               )}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              DEDETIZAÇÃO<br />
-              ESCORPIÃO<br />
-              OU CUPIM
+              Serviços de dedetização e desentupidora com responsabilidade ambiental
             </motion.h2>
             
             <motion.h3
               className={cn(
-                'font-black mb-6 md:mb-8',
+                'font-semibold mb-6 md:mb-8 text-gray-800',
                 isMobile ? 'text-2xl' : 'text-3xl md:text-4xl'
               )}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              NÓS RESOLVEMOS<br />
-              <span className="text-red-400">SEU PROBLEMA</span>
+              Equipe técnica, produtos autorizados e compromisso com a saúde da sua família.
             </motion.h3>
 
             <motion.div
