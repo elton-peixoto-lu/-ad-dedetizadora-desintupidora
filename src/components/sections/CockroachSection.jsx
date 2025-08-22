@@ -20,8 +20,8 @@ export const CockroachSection = () => {
   return (
     <section id="servicos" className={companyClasses.section.cockroach}>
       <GlassmorphismSection 
-        variant="colored"
-        intensity="strong"
+        variant="light"
+        intensity="medium"
         containerClassName="py-4 md:py-8"
       >
         <div className={cn(

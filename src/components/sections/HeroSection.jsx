@@ -114,7 +114,7 @@ export const HeroSection = () => {
         <GlassmorphismSection 
           variant="light"
           intensity="medium"
-          containerClassName="my-4 md:my-8 ring-1 ring-[#8f1d1d]/40"
+          containerClassName="my-4 md:my-8"
         >
           {/* Conteúdo Principal */}
           <div className={cn(
