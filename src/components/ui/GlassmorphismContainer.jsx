@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { cn } from '../../utils/classNames';
 import { useResponsive } from '../../hooks/useResponsive';
+import watermark from '../../assets/services/meio-ambiente.jpg';
 
 /**
  * Container com efeito glassmorphism responsivo
@@ -17,7 +18,7 @@ export const GlassmorphismContainer = ({
   const variants = {
     light: {
       bg: 'bg-white',
-      border: 'border border-gray-300',
+      border: 'border border-green-200',
       shadow: 'shadow-lg shadow-black/10'
     },
     dark: {
@@ -62,6 +63,16 @@ export const GlassmorphismContainer = ({
       {/* Overlay gradient sutil */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/5" />
+        {/* Marca d'água ambiental */}
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-10"
+          style={{
+            backgroundImage: `url(${watermark})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: '300px auto'
+          }}
+        />
       </div>
       
       {/* Conteúdo */}
