@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { cn, companyClasses, responsiveClasses } from '../../utils/classNames';
 import { useResponsive } from '../../hooks/useResponsive';
 import { WhatsAppButton } from '../shared/WhatsAppButton';
+import { FaShieldAlt, FaBug, FaTint, FaFlask, FaToilet } from 'react-icons/fa';
 import { CompanyLogo } from '../shared/CompanyLogo';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 
@@ -36,14 +37,14 @@ export const CockroachSection = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="w-40 h-40 md:w-48 md:h-48 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center shadow-md">
-              <span className="text-5xl">🛡️</span>
+              <FaShieldAlt className="text-red-600" size={44} />
             </div>
           </motion.div>
 
           {/* Lado direito - Texto e contato */}
           <motion.div
             className={cn(
-              'text-white text-center',
+              'text-gray-900 text-center',
               !isMobile ? 'lg:text-left lg:order-2' : 'order-1'
             )}
             initial={{ opacity: 0, x: 50 }}
@@ -58,9 +59,6 @@ export const CockroachSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              style={{ 
-                textShadow: '2px 2px 8px rgba(0,0,0,0.7)',
-              }}
             >
               Controle de pragas com segurança e garantia
             </motion.h2>
@@ -73,20 +71,20 @@ export const CockroachSection = () => {
               transition={{ staggerChildren: 0.15 }}
             >
               {[
-                { emoji: '🐜', text: 'Controle de pragas completo' },
-                { emoji: '💧', text: 'Limpeza e higienização de caixa d’água' },
-                { emoji: '🧪', text: 'Dedetização profissional e segura' },
-                { emoji: '🚽', text: 'Desentupidora – emergências e manutenção' }
+                { Icon: FaBug, text: 'Controle de pragas completo' },
+                { Icon: FaTint, text: 'Limpeza e higienização de caixa d’água' },
+                { Icon: FaFlask, text: 'Dedetização profissional e segura' },
+                { Icon: FaToilet, text: 'Desentupidora – emergências e manutenção' }
               ].map((s, i) => (
                 <motion.li
                   key={i}
-                  className="flex items-start gap-3 text-white/90 text-lg md:text-xl mb-2"
+                  className="flex items-start gap-3 text-gray-800 text-lg md:text-xl mb-2"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <span className="text-2xl md:text-3xl leading-none">{s.emoji}</span>
+                  <s.Icon className="text-red-600 mt-1" size={20} />
                   <span className="leading-snug">{s.text}</span>
                 </motion.li>
               ))}
