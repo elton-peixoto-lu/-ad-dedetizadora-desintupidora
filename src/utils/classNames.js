@@ -47,9 +47,9 @@ export const responsiveClasses = {
   
   // Botões responsivos
   button: {
-    primary: 'px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 text-sm md:text-base lg:text-lg rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-sm',
+    primary: 'px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 text-sm md:text-base lg:text-lg rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold shadow-sm',
     secondary: 'px-3 py-2 md:px-4 md:py-2 text-sm md:text-base rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50',
-    whatsapp: 'flex items-center gap-2 md:gap-3 bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-5 rounded-xl text-base md:text-lg font-semibold transition-colors shadow-sm',
+    whatsapp: 'flex items-center gap-2 md:gap-3 bg-green-600 hover:bg-green-700 text-white py-3 px-5 rounded-xl text-base md:text-lg font-semibold transition-colors shadow-sm',
   },
 };
 

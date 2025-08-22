@@ -16,22 +16,22 @@ export const CompanyLogo = ({
   
   const themes = {
     default: {
-      a: 'text-emerald-700',
-      d: 'text-emerald-500',
+      a: 'text-black',
+      d: 'text-red-600',
       text: 'text-gray-900',
-      subtitle: 'text-emerald-700'
+      subtitle: 'text-red-600'
     },
     light: {
-      a: 'text-emerald-700',
-      d: 'text-emerald-500',
+      a: 'text-black',
+      d: 'text-red-600',
       text: 'text-gray-900',
-      subtitle: 'text-emerald-700'
+      subtitle: 'text-red-600'
     },
     dark: {
-      a: 'text-emerald-300',
-      d: 'text-emerald-200',
+      a: 'text-black',
+      d: 'text-red-500',
       text: 'text-white',
-      subtitle: 'text-emerald-300'
+      subtitle: 'text-red-500'
     }
   };
 
@@ -90,9 +90,9 @@ export const CompactLogo = ({
   className = '' 
 }) => {
   const themes = {
-    default: { a: 'text-emerald-700', d: 'text-emerald-500' },
-    light: { a: 'text-emerald-700', d: 'text-emerald-500' },
-    dark: { a: 'text-emerald-300', d: 'text-emerald-200' }
+    default: { a: 'text-black', d: 'text-red-600' },
+    light: { a: 'text-black', d: 'text-red-600' },
+    dark: { a: 'text-black', d: 'text-red-500' }
   };
 
   const currentTheme = themes[theme];

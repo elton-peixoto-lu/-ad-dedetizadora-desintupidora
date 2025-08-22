@@ -21,14 +21,14 @@ export const GlassmorphismContainer = ({
       shadow: 'shadow-lg shadow-black/10'
     },
     dark: {
-      bg: 'bg-gradient-to-br from-black/40 via-[#300909]/30 to-black/50 backdrop-blur-lg',
+      bg: 'bg-gradient-to-br from-black/10 via-red-50 to-black/10 backdrop-blur-lg',
       border: 'border border-white/10',
       shadow: 'shadow-2xl shadow-black/40'
     },
     colored: {
-      bg: 'bg-gradient-to-br from-[#6b0d0d]/25 via-[#8f1d1d]/15 to-[#1a1a1a]/30 backdrop-blur-lg',
-      border: 'border border-white/12',
-      shadow: 'shadow-2xl shadow-black/30'
+      bg: 'bg-gradient-to-br from-red-600/10 via-red-500/10 to-red-600/10 backdrop-blur-lg',
+      border: 'border border-red-200/40',
+      shadow: 'shadow-lg shadow-red-900/10'
     }
   };
 
@@ -59,8 +59,8 @@ export const GlassmorphismContainer = ({
     >
       {/* Overlay gradient sutil */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/7 via-transparent to-black/15 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#8f1d1d]/12 via-transparent to-[#300909]/12" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/5 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-red-500/10 via-transparent to-red-600/10" />
       </div>
       
       {/* Conteúdo */}
