@@ -30,9 +30,10 @@ export const PestControlSection = () => {
   return (
     <section className={companyClasses.section.pestControl}>
       <GlassmorphismSection 
-        variant="colored"
-        intensity="strong"
+        variant="light"
+        intensity="medium"
         containerClassName="py-4 md:py-8"
+        className="border border-gray-200"
       >
         <div className={cn(
           'grid gap-8 md:gap-12 items-center',

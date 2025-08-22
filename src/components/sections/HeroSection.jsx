@@ -5,7 +5,6 @@ import { WhatsAppButton } from '../shared/WhatsAppButton';
 import { InstagramButton } from '../shared/InstagramButton';
 import { SiGmail } from 'react-icons/si';
 import { CompanyLogo } from '../shared/CompanyLogo';
-import { ResponsiveClock } from '../ui/ResponsiveClock';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 import { ContactQRCodes } from '../shared/ContactQRCodes';
 import { ContactIcons } from '../shared/ContactIcons';
@@ -29,84 +28,13 @@ export const HeroSection = () => {
     secondary: '1913238991'
   };
 
-  const pestDecorations = [
-    { 
-      emoji: '🦂', 
-      position: 'top-4 md:top-8 right-4 md:right-12', 
-      size: 'text-3xl md:text-4xl', 
-      rotation: 'rotate-12',
-      zIndex: 'z-5'
-    },
-    { 
-      emoji: '🐛', 
-      position: 'top-32 md:top-48 left-4 md:left-12', 
-      size: 'text-3xl md:text-4xl', 
-      rotation: '-rotate-12',
-      zIndex: 'z-5'
-    },
-    { 
-      emoji: '🐜', 
-      position: 'bottom-20 md:bottom-28 right-8 md:right-16', 
-      size: 'text-2xl md:text-3xl', 
-      rotation: 'rotate-45',
-      zIndex: 'z-5'
-    }
-  ];
+  // Decorações removidas para visual corporativo
 
   return (
     <section id="hero" className={cn(companyClasses.section.hero, "w-full relative")}> 
       {/* Removido overlay escuro fixo para base clara */}
 
-      {/* Elementos decorativos de pragas - posicionamento responsivo (acima do glass) */}
-      <div className="absolute inset-0 w-full h-full overflow-visible pointer-events-none z-30">
-        {pestDecorations.map((pest, index) => (
-          <motion.div
-            key={index}
-            className={cn(
-              'absolute',
-              pest.position,
-              pest.size,
-              pest.zIndex
-            )}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ 
-              opacity: prefersReducedMotion ? 0.7 : [0.35, 0.9, 0.35],
-              scale: 1,
-              y: prefersReducedMotion ? 0 : [0, -10, 0],
-              rotate: prefersReducedMotion ? 0 : [0, 6, -6, 0]
-            }}
-            transition={{ 
-              duration: 1,
-              delay: index * 0.3,
-              y: {
-                duration: 3.2 + index * 0.4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              opacity: {
-                duration: 5 + index * 0.6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              rotate: {
-                duration: 4.2 + index * 0.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }
-            }}
-            style={{
-              filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.45))',
-            }}
-          >
-            {/* Halo vermelho desfocado para dar contraste */}
-            <span className="absolute -inset-3 rounded-full bg-red-500/30 blur-xl -z-10" />
-            
-            <span className="block">
-              {pest.emoji}
-            </span>
-          </motion.div>
-        ))}
-      </div>
+      {/* Decorações removidas */}
 
       {/* Conteúdo principal com glassmorphism (abaixo dos insetos) */}
       <div className="relative z-10 min-h-screen flex flex-col justify-between py-4 md:py-8 lg:py-12 px-4 md:px-6 lg:px-8">
@@ -195,9 +123,10 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <GlassmorphismSection 
-            variant="colored"
-            intensity="strong"
+            variant="light"
+            intensity="medium"
             containerClassName="mb-4"
+            className="border border-gray-200"
           >
             <div className="text-center space-y-4">
               {/* Títulos */}
