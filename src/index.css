@@ -159,45 +159,33 @@ body {
   padding-bottom: calc(1rem + var(--safe-bottom));
 }
 
-/* Textura sutil e vinheta global para profundidade do fundo */
-/* Moldura com folha.jpeg repetindo nas bordas */
+/* Textura sutil com folhas distribuída por toda a área */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 9998;
-  background: url('/src/assets/services/folha.jpeg') repeat;
-  background-size: 64px auto;
-  opacity: 0.06;
-}
-
-/* Janela interna para formar a borda (mantém o conteúdo legível) */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 16px;
-  pointer-events: none;
-  z-index: 9999;
-  background: #f3f4f6;
-  border-radius: 10px;
+  z-index: 1;
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(243,244,246,0.98) 100%),
+    url('/src/assets/services/folha.jpeg') repeat;
+  background-size: auto, 64px auto;
+  background-blend-mode: normal;
 }
 
 #root { 
   position: relative; 
-  z-index: 10000;
+  z-index: 10;
   background: transparent;
 }
 
-/* Ajustes de escala da moldura por breakpoints */
+/* Ajustes de escala da textura por breakpoints */
 @media (min-width: 768px) {
-  body::before { background-size: 72px auto; }
-  body::after { inset: 18px; }
+  body::before { background-size: auto, 72px auto; }
 }
 
 @media (min-width: 1280px) {
-  body::before { background-size: 88px auto; }
-  body::after { inset: 20px; }
+  body::before { background-size: auto, 88px auto; }
 }
 
 h1 {
