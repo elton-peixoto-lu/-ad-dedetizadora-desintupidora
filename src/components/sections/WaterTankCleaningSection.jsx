@@ -17,12 +17,12 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
   const configs = {
     before: {
       imageName: 'caixa-dagua-suja',
-      buttonBg: 'bg-white border-red-300 text-red-700',
+      buttonBg: 'bg-white border-green-300 text-green-700',
       buttonText: 'ANTES'
     },
     after: {
       imageName: 'caixadagualimpa',
-      buttonBg: 'bg-white border-red-300 text-red-700',
+      buttonBg: 'bg-white border-green-300 text-green-700',
       buttonText: 'DEPOIS'
     }
   };

@@ -7,10 +7,15 @@ const iconModules = import.meta.glob('../../assets/services/*.{svg,png,webp,avif
   import: 'default',
 });
 
-// Mapeia pelo nome do arquivo sem extensão
+// Mapeia pelo nome do arquivo sem extensão (com tolerância a variações)
+const normalize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 const nameToUrl = Object.entries(iconModules).reduce((acc, [path, url]) => {
-  const match = path.match(/services\/(.+)\.(svg|png|webp|avif)$/);
-  if (match) acc[match[1]] = url;
+  const match = path.match(/services\/(.+)\.(svg|png|webp|avif|jpg|jpeg)$/);
+  if (match) {
+    const raw = match[1];
+    acc[raw] = url;
+    acc[normalize(raw)] = url;
+  }
   return acc;
 }, {});
 
@@ -27,7 +32,7 @@ export const ServiceIcon = ({ name, size = 'md', className = '', alt = '' }) => 
     full: 'w-full h-full',
   };
 
-  const src = nameToUrl[name];
+  const src = nameToUrl[name] || nameToUrl[normalize(name)];
 
   if (!src) {
     // Fallback: pequeno bloco neutro para evitar layout shift caso a imagem ainda não exista
