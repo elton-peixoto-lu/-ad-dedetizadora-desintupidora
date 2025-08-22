@@ -20,9 +20,9 @@ export const PlumbingSection = () => {
   return (
     <section className={companyClasses.section.plumbing}>
       <GlassmorphismSection 
-        variant="colored"
-        intensity="strong"
-        containerClassName="py-4 md:py-8"
+        variant="light"
+        intensity="medium"
+        containerClassName="py-6 md:py-10"
       >
         <div className={cn(
           'grid gap-8 md:gap-12 items-center',
@@ -40,42 +40,20 @@ export const PlumbingSection = () => {
           >
             <motion.h2
               className={cn(
-                'font-black mb-6',
+                'font-black mb-4',
                 isMobile ? 'text-2xl' : 'text-3xl md:text-4xl'
               )}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              NÃO DEIXE QUE UM<br />
-              <span className="text-red-500">VASO ENTUPIDO</span><br />
-              ESTRAGUE O<br />
-              <span className="text-red-500">SEU DIA!</span>
+              Soluções profissionais de <span className="text-white">desentupimento</span>
             </motion.h2>
             
-            <motion.div
-              className={cn(
-                'font-black mb-6 md:mb-8',
-                isMobile ? 'text-3xl' : 'text-4xl md:text-5xl'
-              )}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <div className="border-2 md:border-4 border-white px-3 md:px-4 py-2 rounded-lg bg-black/50 inline-block mb-2 md:mb-4">
-                CHAMA
-              </div>
-              <br />
-              <div className={cn(
-                'border-2 md:border-4 border-white px-3 md:px-4 py-2 rounded-lg bg-black/50 inline-block',
-                isMobile ? '' : 'md:ml-8'
-              )}>
-                NO ZAP
-              </div>
-            </motion.div>
+            <p className="text-white/80 mb-6">Atendimento rápido, sem sujeira e com garantia.</p>
 
             <motion.div
-              className="mb-6"
+              className="mt-6 mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}

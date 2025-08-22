@@ -71,7 +71,7 @@ export const CookieBanner = () => {
       return (
         <button
           onClick={() => setShowBanner(true)}
-          className="fixed bottom-4 right-4 z-[9999] bg-white/10 hover:bg-white/15 text-white border border-white/20 rounded-full px-3 py-2 text-xs md:text-sm"
+          className="fixed bottom-6 left-4 z-[9999] bg-white/10 hover:bg-white/15 text-white border border-white/20 rounded-full px-3 py-2 text-xs md:text-sm"
         >
           🍪 Gerenciar cookies
         </button>

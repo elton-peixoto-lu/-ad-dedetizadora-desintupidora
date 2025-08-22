@@ -13,17 +13,17 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
   
   const configs = {
     before: {
-      gradient: 'from-yellow-900 via-yellow-800 to-yellow-700',
-      emoji: '🤢',
-      bgOverlay: 'from-yellow-800/70 via-yellow-700/60 to-yellow-600/50',
-      buttonBg: 'bg-black',
+      gradient: 'from-zinc-700 via-zinc-600 to-zinc-500',
+      emoji: '🧼',
+      bgOverlay: 'from-zinc-700/60 via-zinc-600/50 to-zinc-500/40',
+      buttonBg: 'bg-zinc-700',
       buttonText: 'ANTES'
     },
     after: {
-      gradient: 'from-blue-400 to-blue-600',
+      gradient: 'from-blue-500 to-blue-600',
       emoji: '💧',
       bgOverlay: 'from-blue-300/30 to-transparent',
-      buttonBg: 'bg-red-600',
+      buttonBg: 'bg-blue-600',
       buttonText: 'DEPOIS'
     }
   };
@@ -142,15 +142,12 @@ export const WaterTankCleaningSection = () => {
   return (
     <section className={companyClasses.section.waterTank}>
       <GlassmorphismSection 
-        variant="colored"
-        intensity="strong"
-        containerClassName="py-4 md:py-8"
+        variant="light"
+        intensity="medium"
+        containerClassName="py-6 md:py-10"
       >
         <motion.h2
-          className={cn(
-            responsiveClasses.text.title,
-            'md:text-4xl lg:text-5xl font-black text-white text-center mb-4'
-          )}
+          className={cn('text-2xl md:text-4xl lg:text-5xl font-black text-white text-center mb-2')}
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -159,10 +156,7 @@ export const WaterTankCleaningSection = () => {
         </motion.h2>
         
         <motion.h3
-          className={cn(
-            'font-black text-red-500 text-center mb-8 md:mb-12',
-            isMobile ? 'text-2xl' : 'text-2xl md:text-3xl'
-          )}
+          className={cn('font-semibold text-white/80 text-center mb-6 md:mb-10', isMobile ? 'text-base' : 'text-lg md:text-xl')}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
