@@ -103,7 +103,7 @@ export const FloatingPromotion = () => {
 
               {/* Socorro a toda hora */}
               <div className="text-center mb-3">
-                <p className="text-red-400 font-bold text-xs tracking-wide uppercase animate-pulse">
+                <p className="text-red-500 font-bold text-xs tracking-wide uppercase animate-pulse" style={{ color: '#ef4444' }}>
                   🚨 SOCORRO A TODA HORA 🚨
                 </p>
               </div>
