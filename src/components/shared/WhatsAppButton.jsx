@@ -24,9 +24,9 @@ export const WhatsAppButton = ({
   };
 
   const sizeClasses = {
-    small: 'py-3 px-4 md:py-4 md:px-6 text-base md:text-lg font-bold bg-green-600 hover:bg-green-700 border-2 border-green-500 hover:border-green-400 shadow-lg hover:shadow-xl',
-    medium: 'py-4 px-6 md:py-5 md:px-8 text-lg md:text-xl font-black bg-green-600 hover:bg-green-700 border-2 border-green-500 hover:border-green-400 shadow-xl hover:shadow-2xl',
-    large: 'py-5 px-8 md:py-6 md:px-10 text-xl md:text-2xl font-black bg-green-600 hover:bg-green-700 border-2 border-green-500 hover:border-green-400 shadow-xl hover:shadow-2xl',
+    small: 'py-3 px-4 md:py-4 md:px-6 text-base md:text-lg font-bold bg-[#16a34a] hover:bg-[#15803d] border border-white/10 shadow-lg hover:shadow-xl',
+    medium: 'py-4 px-6 md:py-5 md:px-8 text-lg md:text-xl font-black bg-[#16a34a] hover:bg-[#15803d] border border-white/10 shadow-xl hover:shadow-2xl',
+    large: 'py-5 px-8 md:py-6 md:px-10 text-xl md:text-2xl font-black bg-[#16a34a] hover:bg-[#15803d] border border-white/10 shadow-xl hover:shadow-2xl',
   };
 
   const iconSizes = {

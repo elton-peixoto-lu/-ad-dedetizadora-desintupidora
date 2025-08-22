@@ -112,9 +112,9 @@ export const HeroSection = () => {
       {/* Conteúdo principal com glassmorphism (abaixo dos insetos) */}
       <div className="relative z-10 min-h-screen flex flex-col justify-between py-4 md:py-8 lg:py-12 px-4 md:px-6 lg:px-8">
         <GlassmorphismSection 
-          variant="colored"
-          intensity="strong"
-          containerClassName="my-4 md:my-8"
+          variant="light"
+          intensity="medium"
+          containerClassName="my-4 md:my-8 ring-1 ring-[#8f1d1d]/40"
         >
           {/* Conteúdo Principal */}
           <div className={cn(
@@ -134,13 +134,12 @@ export const HeroSection = () => {
             >
               <motion.h1
                 className={cn(
-                  'font-black leading-snug mb-3 md:mb-6 text-shadow-lg',
+                  'font-black leading-snug mb-3 md:mb-6',
                   isMobile ? 'text-2xl' : 'text-4xl md:text-5xl lg:text-6xl'
                 )}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
               >
                 Invista na saúde<br />
                 da sua família com
@@ -153,16 +152,7 @@ export const HeroSection = () => {
                 )}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 0.8,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                style={{ 
-                  textShadow: '3px 3px 6px rgba(0,0,0,0.7)',
-                  filter: 'drop-shadow(0 0 20px rgba(255,193,7,0.3))'
-                }}
+                transition={{ duration: 0.8, delay: 0.8, type: "spring", stiffness: 100 }}
               >
                 CONTROLE<br />
                 DE PRAGAS
