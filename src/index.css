@@ -159,19 +159,20 @@ body {
   padding-bottom: calc(1rem + var(--safe-bottom));
 }
 
-/* Moldura com folhas nas bordas entre caixas e borda da tela */
+/* Marca d'água com folhas em TODA a área externa */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: -1;
-  background: url('/src/assets/services/folha.jpeg') repeat;
+  background: 
+    url('/src/assets/services/folha.jpeg') repeat;
   background-size: 64px auto;
-  opacity: 0.06;
+  opacity: 0.08;
 }
 
-/* Janela interna para formar a borda (mantém o conteúdo legível) */
+/* Janela interna com verde suave entre bordas e caixas */
 body::after {
   content: "";
   position: fixed;
