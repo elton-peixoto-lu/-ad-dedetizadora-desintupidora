@@ -87,7 +87,7 @@ export const CookieBanner = () => {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: '100%', opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed bottom-0 left-0 right-0 z-[9999] bg-gradient-to-r from-red-700 via-red-700/95 to-red-800 shadow-2xl border-t-4 border-red-600 with-safe-area"
+        className="fixed bottom-0 left-0 right-0 z-[9999] bg-white shadow-2xl border-t border-gray-200 with-safe-area"
       >
         <div className="container mx-auto px-4 py-4 md:py-6">
           {!showDetails ? (
@@ -96,7 +96,7 @@ export const CookieBanner = () => {
               'flex items-center justify-between gap-4',
               isMobile ? 'flex-col' : 'flex-row'
             )}>
-              <div className="flex items-center gap-3 text-white">
+              <div className="flex items-center gap-3 text-gray-800">
                 <span className="text-2xl md:text-3xl">🍪</span>
                 <div>
                   <p className="font-bold text-sm md:text-base">
@@ -104,7 +104,7 @@ export const CookieBanner = () => {
                   </p>
                   <button
                     onClick={() => setShowDetails(true)}
-                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold text-xs md:text-sm px-3 py-1.5 rounded-md border border-white/20 transition-colors"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold text-xs md:text-sm px-3 py-1.5 rounded-md border border-green-700/20 transition-colors"
                   >
                     🔎 Saiba mais sobre nossos cookies
                   </button>
@@ -118,7 +118,7 @@ export const CookieBanner = () => {
                 <motion.button
                   onClick={acceptCookies}
                   className={cn(
-                    'bg-red-600 hover:bg-red-700 text-white font-black py-2 px-4 md:py-3 md:px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg',
+                    'bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg',
                     isMobile ? 'w-full' : ''
                   )}
                   whileHover={{ scale: 1.05 }}
@@ -130,7 +130,7 @@ export const CookieBanner = () => {
                 <motion.button
                   onClick={declineCookies}
                   className={cn(
-                    'bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg transition-all',
+                    'bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-lg transition-all',
                     isMobile ? 'w-full' : ''
                   )}
                   whileHover={{ scale: 1.05 }}
@@ -146,7 +146,7 @@ export const CookieBanner = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               transition={{ duration: 0.3 }}
-              className="text-white"
+              className="text-gray-800"
             >
               <div className="mb-4">
                 <h3 className="text-lg md:text-xl font-black mb-2">
@@ -160,19 +160,19 @@ export const CookieBanner = () => {
 
               <div className="grid gap-3 mb-4 max-h-40 overflow-y-auto">
                 {cookieTypes.map((cookie, index) => (
-                  <div key={index} className="bg-red-900/30 p-3 rounded-lg">
+                  <div key={index} className="bg-gray-100 p-3 rounded-lg">
                     <div className="flex items-center justify-between">
                       <div>
                         <h4 className="font-bold text-sm">{cookie.name}</h4>
-                        <p className="text-xs text-red-100">{cookie.description}</p>
+                        <p className="text-xs text-gray-600">{cookie.description}</p>
                       </div>
                       <div className="ml-3">
                         {cookie.required ? (
-                          <span className="text-xs bg-red-600 px-2 py-1 rounded">Obrigatório</span>
+                          <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">Obrigatório</span>
                         ) : (
                           <input
                             type="checkbox"
-                            className="w-4 h-4 text-red-600 rounded"
+                            className="w-4 h-4 text-green-600 rounded"
                             defaultChecked
                           />
                         )}
