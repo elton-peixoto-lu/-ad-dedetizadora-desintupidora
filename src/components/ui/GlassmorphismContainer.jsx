@@ -62,7 +62,7 @@ export const GlassmorphismContainer = ({
       {/* Overlay gradient sutil */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/5 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-red-500/10 via-transparent to-red-600/10" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-red-400/10 via-transparent to-red-500/10" />
       </div>
       
       {/* Conteúdo */}

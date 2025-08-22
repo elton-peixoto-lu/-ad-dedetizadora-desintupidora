@@ -4,7 +4,8 @@ import { useResponsive } from '../../hooks/useResponsive';
 import { WhatsAppButton } from '../shared/WhatsAppButton';
 import { CompanyLogo } from '../shared/CompanyLogo';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
-import { FaSoap, FaTint } from 'react-icons/fa';
+import { FaTint } from 'react-icons/fa';
+import { MdSick } from 'react-icons/md';
 
 /**
  * Componente para caixa d'água (antes e depois)
@@ -15,10 +16,10 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
   const configs = {
     before: {
       gradient: 'from-zinc-700 via-zinc-600 to-zinc-500',
-      Icon: FaSoap,
+      Icon: MdSick,
       iconClass: 'text-white',
       bgOverlay: 'from-zinc-700/60 via-zinc-600/50 to-zinc-500/40',
-      buttonBg: 'bg-zinc-700',
+      buttonBg: 'bg-white border-red-300 text-red-700',
       buttonText: 'ANTES'
     },
     after: {
@@ -26,7 +27,7 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
       Icon: FaTint,
       iconClass: 'text-white',
       bgOverlay: 'from-blue-300/30 to-transparent',
-      buttonBg: 'bg-blue-600',
+      buttonBg: 'bg-white border-red-300 text-red-700',
       buttonText: 'DEPOIS'
     }
   };
@@ -52,7 +53,7 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
       <motion.div
         className={cn(
           tankSize,
-          'mx-auto mb-4 md:mb-6 rounded-full border-4 md:border-8 border-white',
+          'mx-auto mb-4 md:mb-6 rounded-full border-4 md:border-8 border-red-200',
           `bg-gradient-to-br ${config.gradient}`,
           'flex items-center justify-center relative overflow-hidden shadow-2xl'
         )}
@@ -114,7 +115,7 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
       {/* Label ANTES/DEPOIS */}
       <motion.h3
         className={cn(
-          'font-black text-white px-4 md:px-8 py-2 md:py-3 rounded-full inline-block border-2 md:border-4 border-white',
+          'font-black px-4 md:px-8 py-2 md:py-3 rounded-full inline-block border-2 md:border-4',
           config.buttonBg,
           'text-2xl md:text-3xl lg:text-4xl'
         )}
