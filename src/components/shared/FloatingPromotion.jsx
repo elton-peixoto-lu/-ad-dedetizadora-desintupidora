@@ -26,7 +26,10 @@ export const FloatingPromotion = () => {
     return () => clearTimeout(timer);
   }, [isDismissed]);
 
-  const handleDismiss = () => {
+  const handleDismiss = (e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    console.log('Banner dismissed'); // Debug
     setIsVisible(false);
     setIsDismissed(true);
     sessionStorage.setItem('promo-dismissed', 'true');
@@ -73,10 +76,12 @@ export const FloatingPromotion = () => {
             {/* Botão de fechar */}
             <button
               onClick={handleDismiss}
-              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-all duration-200 group shadow-lg hover:shadow-xl hover:scale-110"
+              onTouchEnd={handleDismiss}
+              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white hover:bg-gray-100 flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110 z-50 cursor-pointer border border-gray-200"
               aria-label="Fechar promoção"
+              type="button"
             >
-              <FaTimes size={14} className="text-gray-700 group-hover:text-gray-900" />
+              <span className="text-gray-800 font-bold text-lg leading-none pointer-events-none select-none">×</span>
             </button>
 
             {/* Conteúdo */}
