@@ -2,7 +2,7 @@ import { cn } from '../../utils/classNames';
 
 // Pré-carrega todos os arquivos de /src/assets/services
 // Suporta svg, png, webp e avif
-const iconModules = import.meta.glob('../../assets/services/*.{svg,png,webp,avif}', {
+const iconModules = import.meta.glob('../../assets/services/*.{svg,png,webp,avif,jpg,jpeg}', {
   eager: true,
   import: 'default',
 });
