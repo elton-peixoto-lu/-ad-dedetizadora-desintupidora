@@ -9,6 +9,7 @@ import { GoogleAnalytics } from './components/shared/GoogleAnalytics'
 import { DynamicCarouselSection } from './components/sections/DynamicCarouselSection'
 import { Header } from './components/shared/Header'
 import { Footer } from './components/shared/Footer'
+import { FloatingPromotion } from './components/shared/FloatingPromotion'
 
 /**
  * Componente principal da aplicação
@@ -42,6 +43,9 @@ function App() {
 
       {/* Banner de Cookies - LGPD/GDPR Compliant */}
       <CookieBanner />
+      
+      {/* Banner Flutuante de Promoção */}
+      <FloatingPromotion />
       
       <Footer />
     </div>
