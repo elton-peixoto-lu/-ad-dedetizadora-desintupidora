@@ -3,16 +3,29 @@ import { cn, companyClasses } from '../utils/classNames';
 import { ContactIcons } from '../components/shared/ContactIcons';
 
 export const ContactPage = () => {
-  const [form, setForm] = useState({ name: '', email: '' });
+  const [form, setForm] = useState({ name: '', email: '', captcha: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [captchaError, setCaptchaError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }));
+    
+    // Limpar erro do captcha quando o usuário digita
+    if (name === 'captcha' && captchaError) {
+      setCaptchaError('');
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Verificar captcha
+    if (form.captcha !== '15') {
+      setCaptchaError('Resposta incorreta. Tente novamente.');
+      return;
+    }
+    
     // Placeholder Typeform logic – aqui você integraria com a API do Typeform
     // ou redirecionaria para um form hospedado
     console.log('Enviar para Typeform:', form);
@@ -46,6 +59,29 @@ export const ContactPage = () => {
               <div>
                 <label className="block text-gray-700 text-sm mb-1" htmlFor="email">E-mail</label>
                 <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} className="w-full rounded-md bg-white border border-gray-300 px-3 py-2 text-gray-800 placeholder-gray-400" placeholder="seu@email.com" />
+              </div>
+
+              {/* Captcha */}
+              <div>
+                <label className="block text-gray-700 text-sm mb-1" htmlFor="captcha">
+                  Verificação de segurança: <span className="font-semibold">Quanto é 10 + 5?</span>
+                </label>
+                <input 
+                  id="captcha" 
+                  name="captcha" 
+                  type="text" 
+                  required 
+                  value={form.captcha} 
+                  onChange={handleChange} 
+                  className={cn(
+                    "w-full rounded-md bg-white border px-3 py-2 text-gray-800 placeholder-gray-400",
+                    captchaError ? "border-red-500" : "border-gray-300"
+                  )}
+                  placeholder="Digite sua resposta" 
+                />
+                {captchaError && (
+                  <p className="text-red-500 text-sm mt-1">{captchaError}</p>
+                )}
               </div>
 
               <div className="text-sm text-gray-600">
