@@ -47,8 +47,8 @@ export const GlassmorphismContainer = ({
         currentVariant.bg.replace(/backdrop-blur-\w+/, intensities[intensity]),
         currentVariant.border,
         currentVariant.shadow,
-        // Texto vermelho por padrão quando o fundo é branco
-        variant === 'light' ? 'text-red-700' : '',
+        // Texto padrão escuro; vermelho ficará só em acentos
+        variant === 'light' ? 'text-gray-900' : '',
         className
       )}
       initial={{ opacity: 0, scale: 0.95 }}

@@ -62,7 +62,7 @@ export const CockroachSection = () => {
             >
               Controle de pragas com segurança e garantia
             </motion.h2>
-            <p className="text-red-600 mb-4">Equipe técnica, produtos autorizados e atendimento pontual.</p>
+            <p className="text-gray-700 mb-4">Equipe técnica, produtos autorizados e atendimento pontual.</p>
             <motion.ul
               className="text-left mx-auto md:mx-0 max-w-xl mb-6 md:mb-8"
               initial={{ opacity: 0 }}

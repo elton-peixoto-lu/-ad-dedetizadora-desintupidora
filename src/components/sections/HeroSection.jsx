@@ -62,7 +62,7 @@ export const HeroSection = () => {
             >
               <motion.h1
                 className={cn(
-                  'font-black leading-snug mb-3 md:mb-6',
+                  'font-black leading-snug mb-3 md:mb-6 text-gray-900',
                   isMobile ? 'text-2xl' : 'text-4xl md:text-5xl lg:text-6xl'
                 )}
                 initial={{ opacity: 0, y: 50 }}
@@ -75,15 +75,14 @@ export const HeroSection = () => {
               
               <motion.div
                 className={cn(
-                  'text-yellow-300 font-black mb-6 md:mb-8 break-words',
+                  'text-gray-800 font-black mb-6 md:mb-8 break-words',
                   isMobile ? 'text-3xl' : 'text-5xl md:text-6xl lg:text-7xl'
                 )}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8, type: "spring", stiffness: 100 }}
               >
-                CONTROLE<br />
-                DE PRAGAS
+                Controle de Pragas
               </motion.div>
             </motion.div>
 

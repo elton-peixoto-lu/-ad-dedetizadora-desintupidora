@@ -18,26 +18,26 @@ export const ContactQRCodes = ({
   const whatsappUrl = `https://wa.me/55${whatsappMain.replace(/\D/g,'')}`;
 
   return (
-    <div className={cn('flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10', className)}>
+    <div className={cn('flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8', className)}>
       {/* Instagram */}
       <motion.div
-        className="flex flex-col items-center gap-2 bg-black/30 p-3 rounded-xl border border-white/10 shadow-xl"
+        className="flex flex-col items-center gap-2 bg-white p-3 rounded-xl border border-gray-200 shadow"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <QRCodeCanvas value={instagramUrl} size={qrSize} bgColor="#00000000" fgColor="#ffffff" level="M" includeMargin={false} />
-        <span className="text-white/80 text-sm md:text-base font-semibold">Instagram</span>
+        <QRCodeCanvas value={instagramUrl} size={qrSize} bgColor="#ffffff" fgColor="#1f2937" level="M" includeMargin={false} />
+        <span className="text-gray-700 text-sm md:text-base font-semibold">Instagram</span>
       </motion.div>
 
       {/* WhatsApp */}
       <motion.div
-        className="flex flex-col items-center gap-2 bg-black/30 p-3 rounded-xl border border-white/10 shadow-xl"
+        className="flex flex-col items-center gap-2 bg-white p-3 rounded-xl border border-gray-200 shadow"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        <QRCodeCanvas value={whatsappUrl} size={qrSize} bgColor="#00000000" fgColor="#16a34a" level="M" includeMargin={false} />
-        <span className="text-white/80 text-sm md:text-base font-semibold">WhatsApp</span>
+        <QRCodeCanvas value={whatsappUrl} size={qrSize} bgColor="#ffffff" fgColor="#0f7a4a" level="M" includeMargin={false} />
+        <span className="text-gray-700 text-sm md:text-base font-semibold">WhatsApp</span>
       </motion.div>
     </div>
   );
