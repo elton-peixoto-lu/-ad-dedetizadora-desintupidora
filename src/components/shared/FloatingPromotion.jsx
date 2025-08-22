@@ -87,7 +87,7 @@ export const FloatingPromotion = () => {
             {/* Conteúdo */}
             <div className="relative z-10">
               {/* Ícone e título */}
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                   <FaGift size={18} className="text-white" />
                 </div>
@@ -99,6 +99,13 @@ export const FloatingPromotion = () => {
                     Para visitantes do site
                   </p>
                 </div>
+              </div>
+
+              {/* Socorro a toda hora */}
+              <div className="text-center mb-3">
+                <p className="text-red-400 font-bold text-xs tracking-wide uppercase animate-pulse">
+                  🚨 SOCORRO A TODA HORA 🚨
+                </p>
               </div>
 
               {/* Descrição */}
