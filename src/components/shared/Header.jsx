@@ -23,18 +23,19 @@ export const Header = () => {
             <CompanyLogo size="small" theme="default" />
           </div>
 
-          <nav className="hidden md:flex items-center gap-1">
-            {navItem('#hero', 'Início')}
-            {navItem('#servicos', 'Serviços')}
-            {navItem('#contato', 'Contato')}
-            <a href="/fale-comigo" className="px-3 py-2 text-sm md:text-base font-semibold text-gray-700 hover:text-gray-900">Fale comigo</a>
-            <a
-              href="/sobre-nos"
-              className="ml-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30"
-            >
-              Sobre nós
-            </a>
-          </nav>
+                  <nav className="hidden md:flex items-center gap-1">
+          {navItem('#hero', 'Início')}
+          {navItem('#servicos', 'Serviços')}
+          {navItem('#contato', 'Contato')}
+          <a href="/fale-comigo" className="px-3 py-2 text-sm md:text-base font-semibold text-gray-700 hover:text-gray-900">Fale comigo</a>
+          <a href="/promocoes" className="px-3 py-2 text-sm md:text-base font-semibold text-green-700 hover:text-green-800">🎉 Promoções</a>
+          <a
+            href="/sobre-nos"
+            className="ml-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30"
+          >
+            Sobre nós
+          </a>
+        </nav>
 
           <button
             className="md:hidden inline-flex items-center justify-center gap-2 h-9 rounded-md border border-gray-300 text-green-700 px-3 bg-white"
@@ -53,6 +54,7 @@ export const Header = () => {
             {navItem('#servicos', 'Serviços')}
             {navItem('#contato', 'Contato')}
             <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-green-700 hover:text-green-800">Fale comigo</a>
+            <a href="/promocoes" className="px-3 py-2 text-sm font-semibold text-green-700 hover:text-green-800">🎉 Promoções</a>
             <a
               href="/sobre-nos"
               className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30 text-center"

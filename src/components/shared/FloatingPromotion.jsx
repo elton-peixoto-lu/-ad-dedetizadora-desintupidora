@@ -17,12 +17,6 @@ export const FloatingPromotion = () => {
       }
     }, 3000);
 
-    // Verificar se já foi dispensado na sessão
-    const dismissed = sessionStorage.getItem('promo-dismissed');
-    if (dismissed) {
-      setIsDismissed(true);
-    }
-
     return () => clearTimeout(timer);
   }, [isDismissed]);
 
@@ -32,7 +26,7 @@ export const FloatingPromotion = () => {
     console.log('Banner dismissed'); // Debug
     setIsVisible(false);
     setIsDismissed(true);
-    sessionStorage.setItem('promo-dismissed', 'true');
+    // Removido sessionStorage - banner aparecerá novamente na próxima visita
   };
 
   const handleWhatsAppClick = () => {
