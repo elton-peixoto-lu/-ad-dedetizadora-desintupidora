@@ -20,7 +20,7 @@ export const HeroSectionMobile = () => {
         <GlassmorphismSection variant="colored" intensity="strong" containerClassName="my-4">
           <div className="grid gap-6 items-center grid-cols-1">
             <div className="text-white text-center max-w-[720px] mx-auto">
-              <motion.h1 className="font-black leading-snug mb-3 text-2xl" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
+              <motion.h1 className="font-black leading-snug mb-3 text-2xl text-green-700" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
                 Invista na saúde<br />da sua família com
               </motion.h1>
               <motion.div className="text-yellow-300 font-black mb-6 text-3xl" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}>

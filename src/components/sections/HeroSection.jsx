@@ -63,7 +63,7 @@ export const HeroSection = () => {
             >
               <motion.h1
                 className={cn(
-                  'font-black leading-snug mb-3 md:mb-6 text-gray-900',
+                  'font-black leading-snug mb-3 md:mb-6 text-green-700',
                   isMobile ? 'text-2xl' : 'text-4xl md:text-5xl lg:text-6xl'
                 )}
                 initial={{ opacity: 0, y: 50 }}
