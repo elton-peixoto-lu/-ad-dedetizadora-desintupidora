@@ -3,6 +3,7 @@ import { cn, companyClasses, responsiveClasses } from '../../utils/classNames';
 import { useResponsive } from '../../hooks/useResponsive';
 import { WhatsAppButton } from '../shared/WhatsAppButton';
 import { FaShieldAlt, FaBug, FaTint, FaFlask, FaToilet } from 'react-icons/fa';
+import { ServiceIcon } from '../shared/ServiceIcon';
 import { CompanyLogo } from '../shared/CompanyLogo';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 
@@ -71,20 +72,20 @@ export const CockroachSection = () => {
               transition={{ staggerChildren: 0.15 }}
             >
               {[
-                { Icon: FaBug, text: 'Controle de pragas completo' },
-                { Icon: FaTint, text: 'Limpeza e higienização de caixa d’água' },
-                { Icon: FaFlask, text: 'Dedetização profissional e segura' },
-                { Icon: FaToilet, text: 'Desentupidora – emergências e manutenção' }
+                { icon: 'pragas', text: 'Controle de pragas com métodos seguros' },
+                { icon: 'caixa-dagua', text: 'Limpeza e higienização de caixa d’água' },
+                { icon: 'dedetizacao', text: 'Dedetização responsável' },
+                { icon: 'desentupimento', text: 'Desentupidora emergencial' }
               ].map((s, i) => (
                 <motion.li
                   key={i}
-                  className="flex items-start gap-3 text-red-700 text-lg md:text-xl mb-2"
+                  className="flex items-start gap-3 text-gray-800 text-lg md:text-xl mb-2"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <s.Icon className="text-red-600 mt-1" size={20} />
+                  <ServiceIcon name={s.icon} size="lg" className="mt-0.5" />
                   <span className="leading-snug">{s.text}</span>
                 </motion.li>
               ))}
