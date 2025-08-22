@@ -37,8 +37,8 @@ export const CockroachSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-40 h-40 md:w-48 md:h-48 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center shadow-md">
-              <FaShieldAlt className="text-red-600" size={44} />
+            <div className="w-40 h-40 md:w-48 md:h-48 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-md overflow-hidden p-2">
+              <ServiceIcon name="pragas" size="full" alt="Controle de pragas" />
             </div>
           </motion.div>
 

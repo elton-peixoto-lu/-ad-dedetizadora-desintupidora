@@ -24,6 +24,7 @@ export const ServiceIcon = ({ name, size = 'md', className = '', alt = '' }) => 
     sm: 'w-6 h-6 md:w-7 md:h-7',
     md: 'w-7 h-7 md:w-8 md:h-8',
     lg: 'w-9 h-9 md:w-10 md:h-10',
+    full: 'w-full h-full',
   };
 
   const src = nameToUrl[name];
