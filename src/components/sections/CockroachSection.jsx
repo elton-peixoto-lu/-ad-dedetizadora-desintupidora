@@ -44,7 +44,7 @@ export const CockroachSection = () => {
           {/* Lado direito - Texto e contato */}
           <motion.div
             className={cn(
-              'text-gray-900 text-center',
+              'text-red-700 text-center',
               !isMobile ? 'lg:text-left lg:order-2' : 'order-1'
             )}
             initial={{ opacity: 0, x: 50 }}
@@ -62,7 +62,7 @@ export const CockroachSection = () => {
             >
               Controle de pragas com segurança e garantia
             </motion.h2>
-            <p className="text-gray-700 mb-4">Equipe técnica, produtos autorizados e atendimento pontual.</p>
+            <p className="text-red-600 mb-4">Equipe técnica, produtos autorizados e atendimento pontual.</p>
             <motion.ul
               className="text-left mx-auto md:mx-0 max-w-xl mb-6 md:mb-8"
               initial={{ opacity: 0 }}
@@ -78,7 +78,7 @@ export const CockroachSection = () => {
               ].map((s, i) => (
                 <motion.li
                   key={i}
-                  className="flex items-start gap-3 text-gray-800 text-lg md:text-xl mb-2"
+                  className="flex items-start gap-3 text-red-700 text-lg md:text-xl mb-2"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.4 }}

@@ -4,6 +4,7 @@ import { useResponsive } from '../../hooks/useResponsive';
 import { WhatsAppButton } from '../shared/WhatsAppButton';
 import { CompanyLogo } from '../shared/CompanyLogo';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
+import { FaSoap, FaTint } from 'react-icons/fa';
 
 /**
  * Componente para caixa d'água (antes e depois)
@@ -14,14 +15,16 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
   const configs = {
     before: {
       gradient: 'from-zinc-700 via-zinc-600 to-zinc-500',
-      emoji: '🧼',
+      Icon: FaSoap,
+      iconClass: 'text-white',
       bgOverlay: 'from-zinc-700/60 via-zinc-600/50 to-zinc-500/40',
       buttonBg: 'bg-zinc-700',
       buttonText: 'ANTES'
     },
     after: {
       gradient: 'from-blue-500 to-blue-600',
-      emoji: '💧',
+      Icon: FaTint,
+      iconClass: 'text-white',
       bgOverlay: 'from-blue-300/30 to-transparent',
       buttonBg: 'bg-blue-600',
       buttonText: 'DEPOIS'
@@ -59,7 +62,7 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
         }}
         transition={{ duration: 0.3 }}
       >
-        {/* Emoji central */}
+        {/* Ícone central */}
         <motion.div
           className="text-4xl md:text-5xl lg:text-6xl relative z-10"
           animate={{
@@ -72,7 +75,7 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
             ease: 'easeInOut'
           }}
         >
-          {config.emoji}
+          <config.Icon className={config.iconClass} />
         </motion.div>
         
         {/* Overlay de efeito */}
@@ -147,16 +150,16 @@ export const WaterTankCleaningSection = () => {
         containerClassName="py-6 md:py-10"
       >
         <motion.h2
-          className={cn('text-2xl md:text-4xl lg:text-5xl font-black text-white text-center mb-2')}
+          className={cn('text-2xl md:text-4xl lg:text-5xl font-black text-red-700 text-center mb-2')}
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          limpeza de caixa d' água
+          Limpeza de caixa d’água
         </motion.h2>
         
         <motion.h3
-          className={cn('font-semibold text-white/80 text-center mb-6 md:mb-10', isMobile ? 'text-base' : 'text-lg md:text-xl')}
+          className={cn('font-semibold text-red-600 text-center mb-6 md:mb-10', isMobile ? 'text-base' : 'text-lg md:text-xl')}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

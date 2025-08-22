@@ -123,7 +123,7 @@ export const HeroSection = () => {
             {/* Lado esquerdo - Texto principal */}
             <motion.div
               className={cn(
-                'text-gray-900 text-center break-words',
+                'text-red-700 text-center break-words',
                 !isMobile ? 'lg:text-left' : '',
                 'max-w-[780px]'
               )}
@@ -201,7 +201,7 @@ export const HeroSection = () => {
             <div className="text-center space-y-4">
               {/* Títulos */}
               <motion.h3
-                className="text-gray-900 font-bold text-lg md:text-xl mb-4"
+                className="text-red-700 font-bold text-lg md:text-xl mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.4 }}
@@ -237,13 +237,13 @@ export const HeroSection = () => {
               {/* Separador */}
               <div className="flex items-center justify-center my-4">
                 <div className="h-px bg-gray-200 flex-1"></div>
-                <span className="px-4 text-gray-500 text-sm font-medium">OU</span>
+                <span className="px-4 text-red-500 text-sm font-medium">OU</span>
                 <div className="h-px bg-gray-200 flex-1"></div>
               </div>
 
               {/* Título Redes Sociais */}
               <motion.h4
-                className="text-gray-900 font-bold text-base md:text-lg mb-2"
+                className="text-red-700 font-bold text-base md:text-lg mb-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.6 }}
