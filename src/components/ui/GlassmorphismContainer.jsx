@@ -16,7 +16,7 @@ export const GlassmorphismContainer = ({
 
   const variants = {
     light: {
-      bg: 'bg-gradient-to-br from-[#6b0d0d]/30 via-[#7a0f0f]/20 to-[#300909]/35 backdrop-blur-md',
+      bg: 'bg-gradient-to-br from-white/5 via-white/3 to-white/1 backdrop-blur-md',
       border: 'border border-white/10',
       shadow: 'shadow-xl shadow-black/30'
     },
@@ -26,7 +26,7 @@ export const GlassmorphismContainer = ({
       shadow: 'shadow-2xl shadow-black/40'
     },
     colored: {
-      bg: 'bg-gradient-to-br from-[#6b0d0d]/35 via-[#8f1d1d]/25 to-[#300909]/40 backdrop-blur-lg',
+      bg: 'bg-gradient-to-br from-[#6b0d0d]/25 via-[#8f1d1d]/15 to-[#1a1a1a]/30 backdrop-blur-lg',
       border: 'border border-white/12',
       shadow: 'shadow-2xl shadow-black/30'
     }

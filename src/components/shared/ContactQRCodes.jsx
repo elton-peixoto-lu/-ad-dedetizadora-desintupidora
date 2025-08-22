@@ -36,7 +36,7 @@ export const ContactQRCodes = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        <QRCodeCanvas value={whatsappUrl} size={qrSize} bgColor="#00000000" fgColor="#22c55e" level="M" includeMargin={false} />
+        <QRCodeCanvas value={whatsappUrl} size={qrSize} bgColor="#00000000" fgColor="#16a34a" level="M" includeMargin={false} />
         <span className="text-white/80 text-sm md:text-base font-semibold">WhatsApp</span>
       </motion.div>
     </div>

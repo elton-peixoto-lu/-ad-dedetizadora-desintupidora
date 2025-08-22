@@ -136,8 +136,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* Gradiente principal do site para evitar cor chapada */
-  background: linear-gradient(135deg, #300909 0%, #6b0d0d 35%, #8f1d1d 70%, #300909 100%);
+  /* Base neutra mais leve para não cansar a visão */
+  background: #121212;
   background-attachment: fixed;
   width: 100%;
   overflow-x: hidden;
@@ -167,10 +167,10 @@ body::before {
   pointer-events: none;
   /* Vinheta e leve ruído */
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.06), rgba(255,255,255,0) 60%),
-    radial-gradient(900px 500px at 100% 0%, rgba(0,0,0,0.18), rgba(0,0,0,0) 50%),
-    radial-gradient(900px 500px at 0% 100%, rgba(0,0,0,0.18), rgba(0,0,0,0) 50%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px);
+    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.04), rgba(255,255,255,0) 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(0,0,0,0.15), rgba(0,0,0,0) 50%),
+    radial-gradient(900px 500px at 0% 100%, rgba(0,0,0,0.15), rgba(0,0,0,0) 50%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px);
   mix-blend-mode: overlay;
 }
 
