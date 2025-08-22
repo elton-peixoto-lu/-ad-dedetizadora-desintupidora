@@ -136,8 +136,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* Tema corporativo: base clara verde + branco */
-  background: #f3f4f6; /* gray-100 */
+  /* Tema corporativo: base verde suave */
+  background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 50%, #f0f9f0 100%);
   background-attachment: fixed;
   width: 100%;
   overflow-x: hidden;
@@ -167,7 +167,7 @@ body::before {
   pointer-events: none;
   z-index: 1;
   background: 
-    linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(243,244,246,0.98) 100%),
+    linear-gradient(135deg, rgba(248,250,248,0.96) 0%, rgba(240,249,240,0.98) 100%),
     url('/src/assets/services/folha.jpeg') repeat;
   background-size: auto, 64px auto;
   background-blend-mode: normal;
