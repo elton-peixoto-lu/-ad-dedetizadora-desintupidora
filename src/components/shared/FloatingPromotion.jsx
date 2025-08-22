@@ -73,10 +73,10 @@ export const FloatingPromotion = () => {
             {/* Botão de fechar */}
             <button
               onClick={handleDismiss}
-              className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors group"
+              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-all duration-200 group shadow-lg hover:shadow-xl hover:scale-110"
               aria-label="Fechar promoção"
             >
-              <FaTimes size={12} className="text-white/80 group-hover:text-white" />
+              <FaTimes size={14} className="text-gray-700 group-hover:text-gray-900" />
             </button>
 
             {/* Conteúdo */}
