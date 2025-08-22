@@ -8,7 +8,7 @@ export const Header = () => {
   const navItem = (href, label) => (
     <a
       href={href}
-      className="px-3 py-2 text-sm md:text-base font-semibold text-gray-700 hover:text-gray-900"
+      className="px-3 py-2 text-sm md:text-base font-semibold text-red-700 hover:text-red-800"
       onClick={() => setOpen(false)}
     >
       {label}
@@ -16,8 +16,8 @@ export const Header = () => {
   );
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-2">
             <CompanyLogo size="small" theme="default" />
@@ -37,7 +37,7 @@ export const Header = () => {
           </nav>
 
           <button
-            className="md:hidden inline-flex items-center justify-center gap-2 h-9 rounded-md border border-gray-300 text-gray-700 px-3 bg-white"
+            className="md:hidden inline-flex items-center justify-center gap-2 h-9 rounded-md border border-gray-300 text-red-700 px-3 bg-white"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
           >
@@ -52,7 +52,7 @@ export const Header = () => {
             {navItem('#hero', 'Início')}
             {navItem('#servicos', 'Serviços')}
             {navItem('#contato', 'Contato')}
-            <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900">Fale comigo</a>
+            <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-red-700 hover:text-red-800">Fale comigo</a>
             <a
               href="#sobre-mim"
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold shadow-sm border border-red-500/40 text-center"
