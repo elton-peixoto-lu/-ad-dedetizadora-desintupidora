@@ -160,13 +160,13 @@ body {
 }
 
 /* Textura sutil e vinheta global para profundidade do fundo */
-/* Moldura com meio-ambiente.jpg repetindo nas bordas */
+/* Moldura com folha.jpeg repetindo nas bordas */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 9998;
   background: url('/src/assets/services/folha.jpeg') repeat;
   background-size: 64px auto;
   opacity: 0.06;
@@ -178,12 +178,16 @@ body::after {
   position: fixed;
   inset: 16px;
   pointer-events: none;
-  z-index: 0;
+  z-index: 9999;
   background: #f3f4f6;
   border-radius: 10px;
 }
 
-#root { position: relative; z-index: 1; }
+#root { 
+  position: relative; 
+  z-index: 10000;
+  background: transparent;
+}
 
 /* Ajustes de escala da moldura por breakpoints */
 @media (min-width: 768px) {
