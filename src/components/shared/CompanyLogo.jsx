@@ -16,22 +16,22 @@ export const CompanyLogo = ({
   
   const themes = {
     default: {
-      a: 'text-[#1a1a1a]',
-      d: 'text-[#8f1d1d]',
-      text: 'text-[#f5f5f5]',
-      subtitle: 'text-[#8f1d1d]'
+      a: 'text-emerald-700',
+      d: 'text-emerald-500',
+      text: 'text-gray-900',
+      subtitle: 'text-emerald-700'
     },
     light: {
-      a: 'text-white',
-      d: 'text-[#8f1d1d]',
-      text: 'text-white',
-      subtitle: 'text-[#8f1d1d]'
+      a: 'text-emerald-700',
+      d: 'text-emerald-500',
+      text: 'text-gray-900',
+      subtitle: 'text-emerald-700'
     },
     dark: {
-      a: 'text-[#1a1a1a]',
-      d: 'text-[#8f1d1d]',
-      text: 'text-[#1a1a1a]',
-      subtitle: 'text-[#8f1d1d]'
+      a: 'text-emerald-300',
+      d: 'text-emerald-200',
+      text: 'text-white',
+      subtitle: 'text-emerald-300'
     }
   };
 
@@ -55,7 +55,7 @@ export const CompanyLogo = ({
       {/* Texto da empresa */}
       <div className={cn('font-black', textSize)}>
         <div className={currentTheme.subtitle}>DEDETIZADORA E</div>
-        <div className={currentTheme.text}>DESINTUPIDORA</div>
+        <div className={currentTheme.text}>DESENTUPIDORA</div>
       </div>
     </div>
   );
@@ -90,9 +90,9 @@ export const CompactLogo = ({
   className = '' 
 }) => {
   const themes = {
-    default: { a: 'text-black', d: 'text-red-400' },
-    light: { a: 'text-white', d: 'text-red-500' },
-    dark: { a: 'text-black', d: 'text-red-600' }
+    default: { a: 'text-emerald-700', d: 'text-emerald-500' },
+    light: { a: 'text-emerald-700', d: 'text-emerald-500' },
+    dark: { a: 'text-emerald-300', d: 'text-emerald-200' }
   };
 
   const currentTheme = themes[theme];

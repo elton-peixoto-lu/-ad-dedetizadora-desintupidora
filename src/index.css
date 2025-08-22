@@ -136,8 +136,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* Tema corporativo: base clara */
-  background: #f7f7f9;
+  /* Tema corporativo: base clara verde + branco */
+  background: #f7f9f8;
   background-attachment: fixed;
   width: 100%;
   overflow-x: hidden;
