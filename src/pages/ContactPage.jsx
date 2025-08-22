@@ -20,40 +20,40 @@ export const ContactPage = () => {
   };
 
   return (
-    <section className={cn('min-h-screen py-10 md:py-16', companyClasses.section.pestControl)}>
+    <section className={cn('min-h-screen py-10 md:py-16')}>
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-3xl">
         {/* Voltar */}
         <div className="mb-4">
-          <a href="/" className="inline-flex items-center gap-2 text-white/90 hover:text-white">
+          <a href="/" className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900">
             ← Voltar
           </a>
         </div>
         {/* Social icons (reutilizável) */}
         <ContactIcons className="mb-6" size="md" showLabels={false} />
 
-        <div className="bg-black/30 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md">
-          <h1 className="text-white font-black text-2xl md:text-3xl mb-2 text-center">Fale comigo</h1>
-          <p className="text-white/80 text-center mb-6">Preencha seus dados e retornaremos em breve.</p>
+        <div className="rounded-2xl p-6 md:p-8 bg-white border border-green-200 shadow-lg">
+          <h1 className="text-green-700 font-bold text-2xl md:text-3xl mb-2 text-center">Fale comigo</h1>
+          <p className="text-gray-700 text-center mb-6">Preencha seus dados e retornaremos em breve.</p>
 
           {submitted ? (
-            <div className="text-center text-white font-semibold">Obrigado! Sua mensagem foi enviada.</div>
+            <div className="text-center text-green-700 font-semibold">Obrigado! Sua mensagem foi enviada.</div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-white/80 text-sm mb-1" htmlFor="name">Nome</label>
-                <input id="name" name="name" type="text" required value={form.name} onChange={handleChange} className="w-full rounded-md bg-black/40 border border-white/20 px-3 py-2 text-white placeholder-white/40" placeholder="Seu nome" />
+                <label className="block text-gray-700 text-sm mb-1" htmlFor="name">Nome</label>
+                <input id="name" name="name" type="text" required value={form.name} onChange={handleChange} className="w-full rounded-md bg-white border border-gray-300 px-3 py-2 text-gray-800 placeholder-gray-400" placeholder="Seu nome" />
               </div>
               <div>
-                <label className="block text-white/80 text-sm mb-1" htmlFor="email">E-mail</label>
-                <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} className="w-full rounded-md bg-black/40 border border-white/20 px-3 py-2 text-white placeholder-white/40" placeholder="seu@email.com" />
+                <label className="block text-gray-700 text-sm mb-1" htmlFor="email">E-mail</label>
+                <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} className="w-full rounded-md bg-white border border-gray-300 px-3 py-2 text-gray-800 placeholder-gray-400" placeholder="seu@email.com" />
               </div>
 
-              <div className="text-sm text-white/70">
-                Ao continuar você concorda com nossa <a href="/lgpd" className="underline hover:text-white">Política de Privacidade (LGPD)</a>. Dúvidas: <a href="mailto:addedetizadoraedesentupidora@gmail.com" className="underline hover:text-white">addedetizadoraedesentupidora@gmail.com</a>
+              <div className="text-sm text-gray-600">
+                Ao continuar você concorda com nossa <a href="/lgpd" className="underline text-green-700 hover:text-green-800">Política de Privacidade (LGPD)</a>. Dúvidas: <a href="mailto:addedetizadoraedesentupidora@gmail.com" className="underline text-green-700 hover:text-green-800">addedetizadoraedesentupidora@gmail.com</a>
               </div>
 
               <div className="pt-2">
-                <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white font-black py-2 rounded-lg border border-red-400/60">Enviar</button>
+                <button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg shadow-md">Enviar</button>
               </div>
 
               {/* Placeholder para Typeform embed */}
