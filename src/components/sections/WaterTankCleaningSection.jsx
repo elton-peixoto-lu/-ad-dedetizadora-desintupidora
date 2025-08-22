@@ -48,12 +48,12 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
       <motion.div
         className={cn(
           tankSize,
-          'mx-auto mb-4 md:mb-6 rounded-xl border-4 md:border-8 border-red-200 bg-white flex items-center justify-center overflow-hidden shadow-xl'
+          'mx-auto mb-4 md:mb-6 rounded-xl border-4 md:border-8 border-green-300 bg-white flex items-center justify-center overflow-hidden shadow-xl'
         )}
         whileHover={{ scale: prefersReducedMotion ? 1 : 1.03 }}
         transition={{ duration: 0.2 }}
       >
-        <ServiceIcon name={config.imageName} size="full" alt={type === 'before' ? 'Caixa d’água antes da limpeza' : 'Caixa d’água após a limpeza'} />
+        <ServiceIcon name={config.imageName} size="full" className="object-cover" alt={type === 'before' ? 'Caixa d’água antes da limpeza' : 'Caixa d’água após a limpeza'} />
       </motion.div>
 
       {/* Label ANTES/DEPOIS */}
@@ -95,7 +95,7 @@ export const WaterTankCleaningSection = () => {
         containerClassName="py-6 md:py-10"
       >
         <motion.h2
-          className={cn('text-2xl md:text-4xl lg:text-5xl font-black text-red-700 text-center mb-2')}
+          className={cn('text-2xl md:text-4xl lg:text-5xl font-bold text-green-700 text-center mb-2')}
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
