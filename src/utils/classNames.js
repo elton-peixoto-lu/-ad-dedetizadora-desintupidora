@@ -107,10 +107,10 @@ export const companyClasses = {
   },
   
   section: {
-    hero: 'min-h-screen relative bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(255,255,255,0.06),rgba(255,255,255,0)_60%)]',
-    cockroach: 'py-8 md:py-12 relative bg-[linear-gradient(135deg,#7f1d1d_0%,#b91c1c_35%,#dc2626_65%,#991b1b_100%)]',
-    plumbing: 'py-8 md:py-12 relative bg-[linear-gradient(135deg,#641e16_0%,#7f1d1d_30%,#991b1b_70%,#3b0d0d_100%)]',
-    waterTank: 'py-8 md:py-12 relative bg-[linear-gradient(135deg,#111111_0%,#1f2937_30%,#0b0b0b_100%)]',
-    pestControl: 'py-8 md:py-12 relative bg-[linear-gradient(135deg,#7f1d1d_0%,#b91c1c_35%,#dc2626_65%,#991b1b_100%)]',
+    hero: 'min-h-screen relative',
+    cockroach: 'py-8 md:py-12 relative',
+    plumbing: 'py-8 md:py-12 relative',
+    waterTank: 'py-8 md:py-12 relative',
+    pestControl: 'py-8 md:py-12 relative',
   },
 };

@@ -37,11 +37,12 @@ export const Header = () => {
           </nav>
 
           <button
-            className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-md border border-white/15 text-white/90"
+            className="md:hidden inline-flex items-center justify-center gap-2 h-9 rounded-md border border-white/15 text-white/90 px-3 bg-black/40"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Abrir menu"
+            aria-label={open ? 'Fechar menu' : 'Abrir menu'}
           >
-            ☰
+            <span className="text-lg">☰</span>
+            <span className="text-xs font-semibold">{open ? 'Fechar' : 'Menu'}</span>
           </button>
         </div>
 
