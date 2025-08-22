@@ -7,7 +7,7 @@ export const Header = () => {
 
   const navItem = (href, label) => (
     <a
-      href={href}
+      href={href.startsWith('#') ? `/${href}` : href}
       className="px-3 py-2 text-sm md:text-base font-semibold text-gray-700 hover:text-gray-900"
       onClick={() => setOpen(false)}
     >
