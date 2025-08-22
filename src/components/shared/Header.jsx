@@ -37,7 +37,7 @@ export const Header = () => {
           </nav>
 
           <button
-            className="md:hidden inline-flex items-center justify-center gap-2 h-9 rounded-md border border-gray-300 text-red-700 px-3 bg-white"
+            className="md:hidden inline-flex items-center justify-center gap-2 h-9 rounded-md border border-gray-300 text-green-700 px-3 bg-white"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
           >
@@ -52,7 +52,7 @@ export const Header = () => {
             {navItem('#hero', 'Início')}
             {navItem('#servicos', 'Serviços')}
             {navItem('#contato', 'Contato')}
-            <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-red-700 hover:text-red-800">Fale comigo</a>
+            <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-green-700 hover:text-green-800">Fale comigo</a>
             <a
               href="/sobre-nos"
               className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30 text-center"

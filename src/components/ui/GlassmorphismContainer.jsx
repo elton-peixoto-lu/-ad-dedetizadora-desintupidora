@@ -27,9 +27,9 @@ export const GlassmorphismContainer = ({
       shadow: 'shadow-2xl shadow-black/40'
     },
     colored: {
-      bg: 'bg-gradient-to-br from-red-600/10 via-red-500/10 to-red-600/10 backdrop-blur-lg',
-      border: 'border border-red-200/40',
-      shadow: 'shadow-lg shadow-red-900/10'
+      bg: 'bg-gradient-to-br from-green-600/10 via-green-500/10 to-green-600/10 backdrop-blur-lg',
+      border: 'border border-green-200/40',
+      shadow: 'shadow-lg shadow-green-900/10'
     }
   };
 
