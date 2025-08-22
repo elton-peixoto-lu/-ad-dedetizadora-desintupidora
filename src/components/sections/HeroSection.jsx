@@ -76,7 +76,7 @@ export const HeroSection = () => {
               
               <motion.div
                 className={cn(
-                  'text-gray-800 font-black mb-6 md:mb-8 break-words',
+                  'text-black font-black mb-6 md:mb-8 break-words',
                   isMobile ? 'text-3xl' : 'text-5xl md:text-6xl lg:text-7xl'
                 )}
                 initial={{ opacity: 0, scale: 0.8 }}
