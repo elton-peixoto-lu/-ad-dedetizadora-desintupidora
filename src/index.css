@@ -160,7 +160,23 @@ body {
 }
 
 /* Textura sutil e vinheta global para profundidade do fundo */
-body::before { content: none; }
+/* Moldura com folhas (gota d’água) nas quatro bordas */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    url('/src/assets/services/gotadagua.webp') no-repeat top 12px left 12px,
+    url('/src/assets/services/gotadagua.webp') no-repeat top 12px right 12px,
+    url('/src/assets/services/gotadagua.webp') no-repeat bottom 12px left 12px,
+    url('/src/assets/services/gotadagua.webp') no-repeat bottom 12px right 12px;
+  background-size: 110px 110px, 110px 110px, 110px 110px, 110px 110px;
+  opacity: 0.08;
+}
+
+#root { position: relative; z-index: 1; }
 
 h1 {
   font-size: 3.2em;
