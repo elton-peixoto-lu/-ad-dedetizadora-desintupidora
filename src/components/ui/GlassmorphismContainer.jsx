@@ -17,7 +17,7 @@ export const GlassmorphismContainer = ({
   const variants = {
     light: {
       bg: 'bg-white',
-      border: 'border border-gray-200',
+      border: 'border border-gray-300',
       shadow: 'shadow-lg shadow-black/10'
     },
     dark: {

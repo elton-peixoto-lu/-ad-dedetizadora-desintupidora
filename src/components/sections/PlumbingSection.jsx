@@ -3,6 +3,7 @@ import { cn, companyClasses, responsiveClasses } from '../../utils/classNames';
 import { useResponsive } from '../../hooks/useResponsive';
 import { WhatsAppButton } from '../shared/WhatsAppButton';
 import { CompanyLogo } from '../shared/CompanyLogo';
+import { FaToilet } from 'react-icons/fa';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 
 /**
@@ -31,7 +32,7 @@ export const PlumbingSection = () => {
           {/* Lado esquerdo - Texto */}
           <motion.div
             className={cn(
-              'text-white text-center',
+              'text-red-700 text-center',
               !isMobile ? 'lg:text-left lg:order-1' : 'order-2'
             )}
             initial={{ opacity: 0, x: -50 }}
@@ -47,10 +48,10 @@ export const PlumbingSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Soluções profissionais de <span className="text-white">desentupimento</span>
+              Soluções profissionais de <span className="text-red-700">desentupimento</span>
             </motion.h2>
             
-            <p className="text-white/80 mb-6">Atendimento rápido, sem sujeira e com garantia.</p>
+            <p className="text-red-600 mb-6">Atendimento rápido, sem sujeira e com garantia.</p>
 
             <motion.div
               className="mt-6 mb-6"
@@ -108,11 +109,11 @@ export const PlumbingSection = () => {
                   textShadow: '0 0 20px rgba(255,255,255,0.6)'
                 }}
               >
-                🚽
+                <FaToilet className="text-gray-500" />
               </motion.div>
               
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-blue-500/8 rounded-full blur-2xl scale-125 -z-10"></div>
+              <div className="absolute inset-0 bg-red-500/5 rounded-full blur-2xl scale-125 -z-10"></div>
             </div>
             
             {/* Logo AD */}

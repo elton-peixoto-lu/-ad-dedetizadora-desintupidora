@@ -17,7 +17,7 @@ import { AboutMe } from './components/sections/AboutMe'
  */
 function App() {
   return (
-    <div className="min-h-screen bg-black overflow-x-hidden">
+    <div className="min-h-screen bg-gray-100 overflow-x-hidden">
       <Header />
       {/* Google Analytics - só ativa com consentimento */}
       <GoogleAnalytics measurementId="G-XXXXXXXXXX" />
