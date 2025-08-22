@@ -16,22 +16,22 @@ export const CompanyLogo = ({
   
   const themes = {
     default: {
-      a: 'text-black',
-      d: 'text-red-400',
-      text: 'text-white',
-      subtitle: 'text-red-400'
+      a: 'text-[#1a1a1a]',
+      d: 'text-[#8f1d1d]',
+      text: 'text-[#f5f5f5]',
+      subtitle: 'text-[#8f1d1d]'
     },
     light: {
       a: 'text-white',
-      d: 'text-red-500',
+      d: 'text-[#8f1d1d]',
       text: 'text-white',
-      subtitle: 'text-red-500'
+      subtitle: 'text-[#8f1d1d]'
     },
     dark: {
-      a: 'text-black',
-      d: 'text-red-600',
-      text: 'text-black',
-      subtitle: 'text-red-600'
+      a: 'text-[#1a1a1a]',
+      d: 'text-[#8f1d1d]',
+      text: 'text-[#1a1a1a]',
+      subtitle: 'text-[#8f1d1d]'
     }
   };
 
