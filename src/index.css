@@ -167,9 +167,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: url('/src/assets/services/meio-ambiente.jpg') repeat;
-  background-size: 80px auto;
-  opacity: 0.10;
+  background: url('/src/assets/services/folha.jpeg') repeat;
+  background-size: 64px auto;
+  opacity: 0.06;
 }
 
 /* Janela interna para formar a borda (mantém o conteúdo legível) */
@@ -184,6 +184,17 @@ body::after {
 }
 
 #root { position: relative; z-index: 1; }
+
+/* Ajustes de escala da moldura por breakpoints */
+@media (min-width: 768px) {
+  body::before { background-size: 72px auto; }
+  body::after { inset: 18px; }
+}
+
+@media (min-width: 1280px) {
+  body::before { background-size: 88px auto; }
+  body::after { inset: 20px; }
+}
 
 h1 {
   font-size: 3.2em;
