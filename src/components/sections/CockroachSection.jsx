@@ -72,10 +72,10 @@ export const CockroachSection = () => {
               transition={{ staggerChildren: 0.15 }}
             >
               {[
-                { icon: 'pragas', text: 'Controle de pragas com métodos seguros' },
-                { icon: 'caixa-dagua', text: 'Limpeza e higienização de caixa d’água' },
-                { icon: 'dedetizacao', text: 'Dedetização responsável' },
-                { icon: 'desentupimento', text: 'Desentupidora emergencial' }
+                { icon: 'barata', text: 'Controle de pragas com métodos seguros' },
+                { icon: 'caixadagualimpa', text: 'Limpeza e higienização de caixa d’água' },
+                { icon: 'detetizacao', text: 'Dedetização responsável' },
+                { icon: 'desentiupir', text: 'Desentupidora emergencial' }
               ].map((s, i) => (
                 <motion.li
                   key={i}
@@ -85,7 +85,7 @@ export const CockroachSection = () => {
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <ServiceIcon name={s.icon} size="lg" className="mt-0.5" />
+                  <ServiceIcon name={s.icon} size="lg" className="mt-0.5" alt={s.text} />
                   <span className="leading-snug">{s.text}</span>
                 </motion.li>
               ))}
