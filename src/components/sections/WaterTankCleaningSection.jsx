@@ -6,6 +6,7 @@ import { CompanyLogo } from '../shared/CompanyLogo';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 import { FaTint } from 'react-icons/fa';
 import { MdSick } from 'react-icons/md';
+import { ServiceIcon } from '../shared/ServiceIcon';
 
 /**
  * Componente para caixa d'água (antes e depois)
@@ -15,18 +16,12 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
   
   const configs = {
     before: {
-      gradient: 'from-zinc-700 via-zinc-600 to-zinc-500',
-      Icon: MdSick,
-      iconClass: 'text-white',
-      bgOverlay: 'from-zinc-700/60 via-zinc-600/50 to-zinc-500/40',
+      imageName: 'caixa-dagua-suja',
       buttonBg: 'bg-white border-red-300 text-red-700',
       buttonText: 'ANTES'
     },
     after: {
-      gradient: 'from-blue-500 to-blue-600',
-      Icon: FaTint,
-      iconClass: 'text-white',
-      bgOverlay: 'from-blue-300/30 to-transparent',
+      imageName: 'caixadagualimpa',
       buttonBg: 'bg-white border-red-300 text-red-700',
       buttonText: 'DEPOIS'
     }
@@ -49,67 +44,16 @@ const WaterTankDisplay = ({ type, size, className = '' }) => {
         stiffness: 100
       }}
     >
-      {/* Caixa d'água */}
+      {/* Mini-card com imagem real */}
       <motion.div
         className={cn(
           tankSize,
-          'mx-auto mb-4 md:mb-6 rounded-full border-4 md:border-8 border-red-200',
-          `bg-gradient-to-br ${config.gradient}`,
-          'flex items-center justify-center relative overflow-hidden shadow-2xl'
+          'mx-auto mb-4 md:mb-6 rounded-xl border-4 md:border-8 border-red-200 bg-white flex items-center justify-center overflow-hidden shadow-xl'
         )}
-        whileHover={{
-          scale: prefersReducedMotion ? 1 : 1.05,
-          rotate: prefersReducedMotion ? 0 : type === 'before' ? -2 : 2
-        }}
-        transition={{ duration: 0.3 }}
+        whileHover={{ scale: prefersReducedMotion ? 1 : 1.03 }}
+        transition={{ duration: 0.2 }}
       >
-        {/* Ícone central */}
-        <motion.div
-          className="text-4xl md:text-5xl lg:text-6xl relative z-10"
-          animate={{
-            y: prefersReducedMotion ? 0 : type === 'before' ? [0, -5, 0] : [0, 5, 0],
-            scale: prefersReducedMotion ? 1 : [1, 1.1, 1]
-          }}
-          transition={{
-            duration: type === 'before' ? 2 : 3,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        >
-          <config.Icon className={config.iconClass} />
-        </motion.div>
-        
-        {/* Overlay de efeito */}
-        <div className={cn(
-          'absolute inset-4 rounded-full',
-          `bg-gradient-to-t ${config.bgOverlay}`
-        )}></div>
-
-        {/* Bolhas de água limpa (apenas no "depois") */}
-        {type === 'after' && !prefersReducedMotion && (
-          <div className="absolute inset-0">
-            {[...Array(3)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1.5 h-1.5 bg-white/30 rounded-full"
-                style={{
-                  left: `${35 + i * 15}%`,
-                  top: `${25 + i * 10}%`
-                }}
-                animate={{
-                  y: [0, -15, 0],
-                  opacity: [0.3, 0.6, 0.3]
-                }}
-                transition={{
-                  duration: 2.5,
-                  delay: i * 0.5,
-                  repeat: Infinity,
-                  ease: 'easeInOut'
-                }}
-              />
-            ))}
-          </div>
-        )}
+        <ServiceIcon name={config.imageName} size="full" alt={type === 'before' ? 'Caixa d’água antes da limpeza' : 'Caixa d’água após a limpeza'} />
       </motion.div>
 
       {/* Label ANTES/DEPOIS */}
