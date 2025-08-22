@@ -28,28 +28,15 @@ export const CockroachSection = () => {
           'grid gap-8 md:gap-12 items-center',
           isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'
         )}>
-          {/* Lado esquerdo - Pragas animadas */}
+          {/* Lado esquerdo - Ícone profissional */}
           <motion.div
-            className={cn(
-              'relative text-center',
-              !isMobile ? 'lg:order-1' : 'order-2'
-            )}
+            className={cn('relative flex justify-center', !isMobile ? 'lg:order-1' : 'order-2')}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative flex items-center justify-center gap-6 md:gap-8">
-              {['🪳','🦟','🕷️','🐜','🦂'].map((emoji, idx) => (
-                <motion.span
-                  key={idx}
-                  className={cn(isMobile ? 'text-5xl' : 'text-6xl md:text-7xl','relative')}
-                  animate={{ y: prefersReducedMotion ? 0 : [0, -10, 0], rotate: prefersReducedMotion ? 0 : [-5, 5, -5] }}
-                  transition={{ duration: 2 + idx * 0.2, repeat: Infinity, ease: 'easeInOut' }}
-                  style={{ filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.35))' }}
-                >
-                  {emoji}
-                </motion.span>
-              ))}
+            <div className="w-40 h-40 md:w-48 md:h-48 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center shadow-md">
+              <span className="text-5xl">🛡️</span>
             </div>
           </motion.div>
 
@@ -75,9 +62,9 @@ export const CockroachSection = () => {
                 textShadow: '2px 2px 8px rgba(0,0,0,0.7)',
               }}
             >
-              Somos especialistas em controle de pragas,<br />
-              limpeza de caixa d’água e dedetização de qualidade!
+              Controle de pragas com segurança e garantia
             </motion.h2>
+            <p className="text-gray-700 mb-4">Equipe técnica, produtos autorizados e atendimento pontual.</p>
             <motion.ul
               className="text-left mx-auto md:mx-0 max-w-xl mb-6 md:mb-8"
               initial={{ opacity: 0 }}

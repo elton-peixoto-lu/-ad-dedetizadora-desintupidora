@@ -136,8 +136,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* Base neutra mais leve para não cansar a visão */
-  background: #121212;
+  /* Tema corporativo: base clara */
+  background: #f7f7f9;
   background-attachment: fixed;
   width: 100%;
   overflow-x: hidden;
@@ -160,19 +160,7 @@ body {
 }
 
 /* Textura sutil e vinheta global para profundidade do fundo */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  /* Vinheta e leve ruído */
-  background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.04), rgba(255,255,255,0) 60%),
-    radial-gradient(900px 500px at 100% 0%, rgba(0,0,0,0.15), rgba(0,0,0,0) 50%),
-    radial-gradient(900px 500px at 0% 100%, rgba(0,0,0,0.15), rgba(0,0,0,0) 50%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px);
-  mix-blend-mode: overlay;
-}
+body::before { content: none; }
 
 h1 {
   font-size: 3.2em;
