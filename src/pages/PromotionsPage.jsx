@@ -13,10 +13,10 @@ export const PromotionsPage = () => {
             <div className="max-w-4xl mx-auto">
               {/* Título da página */}
               <div className="text-center mb-8">
-                <h1 className="text-green-600 font-black text-3xl md:text-4xl mb-4">
-                  🎉 <span className="text-yellow-400">Promoções</span> Especiais
+                <h1 className="text-yellow-400 font-black text-3xl md:text-4xl mb-4">
+                  🎉 Promoções Especiais
                 </h1>
-                <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
+                <p className="text-green-600 text-lg leading-relaxed max-w-2xl mx-auto">
                   Aproveite nossas ofertas exclusivas em serviços de dedetização e desentupimento. 
                   Descontos especiais para visitantes do nosso site!
                 </p>
