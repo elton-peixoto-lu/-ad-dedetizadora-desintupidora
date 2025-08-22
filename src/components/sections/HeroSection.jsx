@@ -8,6 +8,7 @@ import { CompanyLogo } from '../shared/CompanyLogo';
 import { GlassmorphismSection } from '../ui/GlassmorphismContainer';
 import { ContactQRCodes } from '../shared/ContactQRCodes';
 import { ContactIcons } from '../shared/ContactIcons';
+import { PaymentIcons } from '../shared/PaymentIcons';
 import { useDevice } from '../../providers/DeviceProvider';
 import { HeroSectionMobile } from './HeroSectionMobile';
 
@@ -182,6 +183,16 @@ export const HeroSection = () => {
 
               {/* Ícones de contato reutilizáveis */}
               <ContactIcons className="mt-4" size="sm" />
+              
+              {/* Separador */}
+              <div className="flex items-center justify-center my-4">
+                <div className="h-px bg-gray-200 flex-1"></div>
+                <span className="px-4 text-gray-500 text-xs font-medium">PAGAMENTO</span>
+                <div className="h-px bg-gray-200 flex-1"></div>
+              </div>
+              
+              {/* Ícones de Pagamento */}
+              <PaymentIcons className="mt-4" />
             </div>
           </GlassmorphismSection>
         </motion.div>

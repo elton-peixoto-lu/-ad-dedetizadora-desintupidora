@@ -29,10 +29,10 @@ export const Header = () => {
             {navItem('#contato', 'Contato')}
             <a href="/fale-comigo" className="px-3 py-2 text-sm md:text-base font-semibold text-gray-700 hover:text-gray-900">Fale comigo</a>
             <a
-              href="#sobre-mim"
+              href="/sobre-nos"
               className="ml-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30"
             >
-              Sobre mim
+              Sobre nós
             </a>
           </nav>
 
@@ -54,11 +54,11 @@ export const Header = () => {
             {navItem('#contato', 'Contato')}
             <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-red-700 hover:text-red-800">Fale comigo</a>
             <a
-              href="#sobre-mim"
+              href="/sobre-nos"
               className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30 text-center"
               onClick={() => setOpen(false)}
             >
-              Sobre mim
+              Sobre nós
             </a>
           </div>
         )}

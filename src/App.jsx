@@ -8,7 +8,7 @@ import { CookieBanner } from './components/shared/CookieBanner'
 import { GoogleAnalytics } from './components/shared/GoogleAnalytics'
 import { DynamicCarouselSection } from './components/sections/DynamicCarouselSection'
 import { Header } from './components/shared/Header'
-import { AboutMe } from './components/sections/AboutMe'
+import { Footer } from './components/shared/Footer'
 
 /**
  * Componente principal da aplicação
@@ -40,10 +40,10 @@ function App() {
       {/* Seção Dedetização com Relógio */}
       <PestControlSection />
 
-      <AboutMe />
-
       {/* Banner de Cookies - LGPD/GDPR Compliant */}
       <CookieBanner />
+      
+      <Footer />
     </div>
   )
 }

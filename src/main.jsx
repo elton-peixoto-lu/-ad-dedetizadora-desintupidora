@@ -6,11 +6,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { DeviceProvider } from './providers/DeviceProvider.jsx'
 import { ContactPage } from './pages/ContactPage.jsx'
 import { PrivacyPage } from './pages/PrivacyPage.jsx'
+import { AboutPage } from './pages/AboutPage.jsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
   { path: '/fale-comigo', element: <ContactPage /> },
   { path: '/lgpd', element: <PrivacyPage /> },
+  { path: '/sobre-nos', element: <AboutPage /> },
 ])
 
 createRoot(document.getElementById('root')).render(
