@@ -30,7 +30,7 @@ export const Header = () => {
             <a href="/fale-comigo" className="px-3 py-2 text-sm md:text-base font-semibold text-gray-700 hover:text-gray-900">Fale comigo</a>
             <a
               href="#sobre-mim"
-              className="ml-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold shadow-sm border border-red-500/40"
+              className="ml-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30"
             >
               Sobre mim
             </a>
@@ -55,7 +55,7 @@ export const Header = () => {
             <a href="/fale-comigo" className="px-3 py-2 text-sm font-semibold text-red-700 hover:text-red-800">Fale comigo</a>
             <a
               href="#sobre-mim"
-              className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold shadow-sm border border-red-500/40 text-center"
+              className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm border border-green-600/30 text-center"
               onClick={() => setOpen(false)}
             >
               Sobre mim

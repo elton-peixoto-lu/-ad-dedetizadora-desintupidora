@@ -32,7 +32,7 @@ export const PlumbingSection = () => {
           {/* Lado esquerdo - Texto */}
           <motion.div
             className={cn(
-              'text-red-700 text-center',
+              'text-gray-900 text-center',
               !isMobile ? 'lg:text-left lg:order-1' : 'order-2'
             )}
             initial={{ opacity: 0, x: -50 }}
@@ -48,10 +48,10 @@ export const PlumbingSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Soluções profissionais de <span className="text-red-700">desentupimento</span>
+              <span className="text-green-700">Soluções profissionais</span> de desentupimento
             </motion.h2>
             
-            <p className="text-red-600 mb-6">Atendimento rápido, sem sujeira e com garantia.</p>
+            <p className="text-gray-700 mb-6">Atendimento rápido, sem sujeira e com garantia.</p>
 
             <motion.div
               className="mt-6 mb-6"
