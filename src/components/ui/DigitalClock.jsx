@@ -51,7 +51,8 @@ export const DigitalClock = ({ size = 'medium', className = '', showCaption = tr
       </div>
       {showCaption && (
         <motion.div
-          className={cn('mt-3 text-white font-extrabold tracking-wide text-center', s.caption)}
+          className={cn('mt-3 text-red-500 font-extrabold tracking-wide text-center', s.caption)}
+          style={{ color: '#ef4444' }}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
         >

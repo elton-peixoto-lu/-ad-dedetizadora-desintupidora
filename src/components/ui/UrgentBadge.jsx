@@ -47,7 +47,8 @@ export const UrgentBadge = ({ size = 'medium', className = '' }) => {
 
       {/* Título */}
       <motion.div
-        className={cn('mt-3 font-extrabold tracking-wide text-white text-center', s.title)}
+        className={cn('mt-3 font-extrabold tracking-wide text-red-500 text-center', s.title)}
+        style={{ color: '#ef4444' }}
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
       >
