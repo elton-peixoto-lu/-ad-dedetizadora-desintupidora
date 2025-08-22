@@ -159,45 +159,18 @@ body {
   padding-bottom: calc(1rem + var(--safe-bottom));
 }
 
-/* Textura de folhas APENAS nas bordas externas (16px) */
+/* Textura sutil com folhas distribuída por toda a área */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   pointer-events: none;
-  z-index: -1;
-  background: url('/src/assets/services/folha.jpeg') repeat;
-  background-size: 64px auto;
-  opacity: 0.08;
-  /* Criar máscara para mostrar apenas as bordas */
-  clip-path: polygon(
-    0% 0%, 
-    100% 0%, 
-    100% 16px, 
-    16px 16px, 
-    16px calc(100% - 16px), 
-    100% calc(100% - 16px), 
-    100% 100%, 
-    0% 100%, 
-    0% calc(100% - 16px), 
-    calc(100% - 16px) calc(100% - 16px), 
-    calc(100% - 16px) 16px, 
-    0% 16px
-  );
-}
-
-/* Área interna com verde suave */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 16px;
-  pointer-events: none;
-  z-index: 0;
-  background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 50%, #f0f9f0 100%);
-  border-radius: 10px;
+  z-index: 1;
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(243,244,246,0.98) 100%),
+    url('/src/assets/services/folha.jpeg') repeat;
+  background-size: auto, 64px auto;
+  background-blend-mode: normal;
 }
 
 #root { 
@@ -206,15 +179,13 @@ body::after {
   background: transparent;
 }
 
-/* Ajustes de escala da moldura por breakpoints */
+/* Ajustes de escala da textura por breakpoints */
 @media (min-width: 768px) {
-  body::before { background-size: 72px auto; }
-  body::after { inset: 18px; }
+  body::before { background-size: auto, 72px auto; }
 }
 
 @media (min-width: 1280px) {
-  body::before { background-size: 88px auto; }
-  body::after { inset: 20px; }
+  body::before { background-size: auto, 88px auto; }
 }
 
 h1 {
