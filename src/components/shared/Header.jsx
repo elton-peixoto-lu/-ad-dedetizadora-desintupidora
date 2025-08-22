@@ -17,7 +17,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="max-w-none w-full px-2 sm:px-3 md:px-4 lg:px-6">
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-2">
             <CompanyLogo size="small" theme="default" />

@@ -114,6 +114,7 @@ export const HeroSection = () => {
           variant="light"
           intensity="medium"
           containerClassName="my-4 md:my-8"
+          className="border border-gray-200"
         >
           {/* Conteúdo Principal */}
           <div className={cn(
